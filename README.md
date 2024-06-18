@@ -1,14 +1,14 @@
-# Artificial Intelligence Tutorial for Beginners
+# Artificial Intelligence Introduction for Beginners
 
-## [AI Tutorial](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/AI%20Tutorial.md)
+## [AI Introduction](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/AI%20Introduction.md)
 
-Welcome to the "Artificial Intelligence Tutorial for Beginners"! This comprehensive study note is designed to provide a solid foundation in artificial intelligence (AI) for newcomers. Whether you're a student, an aspiring data scientist, or simply curious about AI, this guide will help you understand the basics and build your knowledge step-by-step.
+Welcome to the "Artificial Intelligence Introduction for Beginners"! This comprehensive study note is designed to provide a solid foundation in artificial intelligence (AI) for newcomers. Whether you're a student, an aspiring data scientist, or simply curious about AI, this guide will help you understand the basics and build your knowledge step-by-step.
 
-"Artificial Intelligence Tutorial for Beginners" covers the fundamental concepts and techniques used in AI. It aims to make complex topics accessible by breaking them down into easy-to-understand segments. You'll learn about the history of AI, core principles, popular algorithms, and practical applications, all illustrated with clear explanations and examples.
+"Artificial Intelligence Introduction for Beginners" covers the fundamental concepts and techniques used in AI. It aims to make complex topics accessible by breaking them down into easy-to-understand segments. You'll learn about the history of AI, core principles, popular algorithms, and practical applications, all illustrated with clear explanations and examples.
 
 ---
 
-## [Artificial Intelligence Index Report 2024](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md)
+## [Artificial Intelligence Index Report 2024](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md)
 
 The 2024 Index is most comprehensive to date and arrives at an important moment when AI’s influence on society has never been more pronounced.
 
@@ -16,7 +16,7 @@ Added the Artificial Intelligence Index Report 2024 to the repository. Provide a
 
 ---
 
-## [Windows AI PC](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Windows%20AI%20PC.md)
+## [Windows AI PC](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Windows%20AI%20PC.md)
 
 Microsoft wants to bring generative AI to the forefront of Windows — and the PCs running it.
 
@@ -24,7 +24,7 @@ I added a simple table to explain the general concept of Copilot+ PCs.
 
 ---
 
-## [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
+## [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
 
 Understanding the memory requirements of models is vital for optimizing deployment and usage. It impacts the choice of hardware and the overall cost.
 
@@ -34,7 +34,7 @@ By framing the information in terms of scaling laws, it becomes clear how each f
 
 ---
 
-## [Distinction between NPUs and GPUs](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Distinction%20between%20NPUs%20and%20GPUs.md#distinction-between-npus-and-gpus)
+## [Distinction between NPUs and GPUs](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Distinction%20between%20NPUs%20and%20GPUs.md#distinction-between-npus-and-gpus)
 
 The features of NPU design enable it to achieve higher energy efficiency compared to traditional GPUs when handling AI computations. 
 
@@ -44,7 +44,7 @@ For businesses, this not only translates to cost savings but also aligns with gl
 
 ---
 
-## [A Comprehensive Overview from Training to Inference](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/A%20Comprehensive%20Overview%20from%20Training%20to%20Inference.md)
+## [A Comprehensive Overview from Training to Inference](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/A%20Comprehensive%20Overview%20from%20Training%20to%20Inference.md)
 
 Understanding LLMs: A Comprehensive Overview from Training to Inference
 [arXiv:2401.02038v2 [cs.CL] 06 Jan 2024](https://arxiv.org/html/2401.02038v2/#S4)
@@ -53,7 +53,7 @@ Have a comprehensive overview of LLMs training and inference techniques to equip
 
 ---
 
-## [SLMs - Small Language Models ](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/SLMs%20-%20Small%20Language%20Models%20.md)
+## [SLMs - Small Language Models ](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/SLMs%20-%20Small%20Language%20Models%20.md)
 
 *Microsoft Phi-3 small model is inspired by "daughter's bedtime story"*
 
