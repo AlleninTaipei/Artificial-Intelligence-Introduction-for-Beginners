@@ -281,3 +281,28 @@
 |Inter-GPU Communication|The high bandwidth provided by NVLink allows for efficient inter-GPU communication, which is crucial for workloads that involve frequent data exchange between GPUs.|The reliance on PCIe for inter-GPU communication results in lower bandwidth and potentially higher latency, which can affect performance in workloads that require intensive GPU-to-GPU communication.|
 |Workload Efficiency|Ideal for tasks that benefit from high-speed data transfer between GPUs, such as distributed training of large neural networks, where data needs to be synchronized across GPUs.| While it has higher raw computational power and improved efficiency, the lack of NVLink means that it may not perform as well in scenarios where fast inter-GPU communication is critical.|
 |Practical Considerations|Deep Learning: In deep learning, especially with large models, the ability to quickly share data between GPUs can significantly impact training times. The RTX 3090's NVLink can provide an advantage in such cases.|Gaming and General Use: For gaming and general consumer applications, the difference in inter-GPU communication speed may be less noticeable, and the overall performance improvement of the RTX 4090 in terms of raw power and efficiency might be more beneficial.|
+
+### Multiple computers (nodes) work together in a network to train the model
+
+* **Google's BERT (Bidirectional Encoder Representations from Transformers)**
+Google trained BERT using a distributed setup across multiple TPUs (Tensor Processing Units). TPUs are specialized hardware accelerators for machine learning workloads, and they can be used in a multi-node configuration to accelerate training. Google's use of TPUs in a distributed manner significantly reduced the time required to train BERT on massive text corpora.
+
+* **OpenAI's GPT-3**
+GPT-3, one of the largest language models, was trained by OpenAI using a large cluster of GPUs across multiple nodes. OpenAI used NVIDIA V100 GPUs in a distributed setup to manage the immense computational load required to train a model with 175 billion parameters. The training process involved sophisticated data and model parallelism techniques to efficiently utilize the hardware resources.
+
+* **Microsoft's Turing-NLG (Natural Language Generation)**
+Microsoft's Turing-NLG, another large-scale language model, was trained on a distributed system of NVIDIA DGX-2 nodes. Each DGX-2 node contains 16 NVIDIA V100 GPUs, and the distributed setup allowed Microsoft to train the model on a vast amount of data, using techniques like data parallelism and model parallelism to scale the training across multiple nodes.
+
+* **DeepMind's AlphaStar**
+Although not a language model, DeepMind's AlphaStar is a notable example of distributed training in reinforcement learning. AlphaStar was trained using a multi-node setup with thousands of TPUs to play the game StarCraft II at a superhuman level. The training process involved complex distributed systems to handle the massive amount of data and computation required.
+
+* **Facebook AI's RoBERTa**
+RoBERTa, a robustly optimized BERT approach, was trained on a distributed setup using PyTorch and NVIDIA GPUs. Facebook AI Research (FAIR) used a large number of GPU nodes to train RoBERTa on diverse datasets, employing techniques like mixed precision training and gradient accumulation to optimize performance across the distributed system.
+
+|Key Techniques Used in Distributed Training||
+|-|-|
+|Data Parallelism|Splitting the training data across multiple GPUs/nodes so each processes a different subset of the data.|
+|Model Parallelism|Dividing the model itself across multiple GPUs/nodes so each processes a different part of the model.|
+|Pipeline Parallelism|Breaking the model into stages and passing data through these stages sequentially.|
+|Gradient Accumulation|Accumulating gradients over several batches to effectively increase the batch size without needing additional memory.|
+|Horovod|An open-source distributed training framework developed by Uber that simplifies the process of training large models across multiple GPUs and nodes.|
