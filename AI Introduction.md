@@ -179,10 +179,10 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 
 |Method|Definition|Primary use case|Data requirements|Advantages|Considerations|
 |-|-|-|-|-|-|
-|Pre-training|Training an Large Language Models from scratch|Unique tasks or domain-specific corpora|Large datasets (billions to trillions of tokens)|Maximum control, tailored for specific needs|Extremely resource-intensive|
+|Pre-training|Training a LLM from scratch|Unique tasks or domain-specific corpora|Large datasets (billions to trillions of tokens)|Maximum control, tailored for specific needs|Extremely resource-intensive|
 |Fine-tuning|Adapting a pretrained Large Language Models to specific datasets or domains|Domain or task specialization|Thousands of domain-specific or instruction examples|Granular control, high specialization|Requires labeled data, computational cost|
 |Prompt engineering|Crafting specialized prompts to guide Large Language Models behavior|Quick, on-the-fly model guidance|None|Fast, cost-effective, no training required|Less control than fine-tuning|
-|**Retrieval augmented generation (RAG)**|Combining an Large Language Models with external knowledge retrieval|**Dynamic datasets and external knowledge**|External knowledge base or database (e.g., vector database)|Dynamically updated context, enhanced accuracy|Increases prompt length and inference computation|
+|**Retrieval augmented generation (RAG)**|Combining a LLM with external knowledge retrieval|**Dynamic datasets and external knowledge**|External knowledge base or database (e.g., vector database)|Dynamically updated context, enhanced accuracy|Increases prompt length and inference computation|
 
 ### Pre-training, fine-tuning and inferencing
 
