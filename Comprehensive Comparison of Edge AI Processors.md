@@ -1,28 +1,47 @@
 # Comprehensive Comparison of Edge AI Processors
 
-| Feature/Specification   | NVIDIA Jetson Series            | Intel Movidius Myriad X      | Google Coral Edge TPU          | Qualcomm Snapdragon Series    | Ambarella CVflow              | Xilinx Versal AI Core        | Arm Cortex-M & Cortex-A       | Mythic AMP                    | NXP i.MX 8M Plus             | NXP S32V Vision Processors    | DEEPX DX1                    | Hailo AI Processors          |
-|-------------------------|---------------------------------|------------------------------|--------------------------------|-------------------------------|-------------------------------|------------------------------|--------------------------------|--------------------------------|-----------------------------------|-----------------------------------|----------------------------|-----------------------------|
-| **AI Performance**      | Up to 32 TOPS                   | 4 TOPS                       | 4 TOPS                         | Up to 45 TOPS                | High-performance CV           | Up to 5.7 TOPS                | Varies by model               | High-performance, low power  | Up to 2.3 TOPS                | High-performance vision and NN | High performance, low power | Up to 26 TOPS               |
-| **Target Applications** | Robotics, smart cities, IoT     | Vision, imaging              | Edge AI, IoT                   | Mobile, IoT, automotive       | Surveillance, automotive       | Versatile AI applications    | IoT, embedded systems         | Smart cameras, IoT, wearables| Smart home, industrial automation | ADAS, autonomous driving       | Smart cameras, IoT, wearables| Smart cities, industry 4.0, automotive |
-| **Integrated ISP**      | Yes                             | Yes                          | No                             | Yes                           | Yes                           | No                           | No                             | No                            | Yes                            | Yes                             | No                          | No                          |
-| **Power Efficiency**    | Moderate to high                | High                         | High                           | High                          | High                          | Moderate to high             | Moderate to high               | High                          | Moderate                      | Moderate                        | High                         | High                        |
-| **Software Support**    | JetPack SDK                     | OpenVINO Toolkit             | Coral AI SDK                   | Qualcomm AI Engine            | CVflow SDK                    | Vitis AI                      | Ethos-U NPU SDK              | Mythic SDK                    | eIQ ML software                | eIQ ML software                  | DEEPX AI SDK                | Hailo SDK                   |
-| **Key Strengths**       | High versatility, strong AI performance | Power efficiency, vision processing | Efficient, cost-effective AI   | Broad application support     | Specialized for computer vision | Flexible hardware acceleration | Broad support for AI          | Energy-efficient, compact AI processing | Versatile, good AI performance    | Automotive-grade, vision capabilities | Energy-efficient, compact AI processing | High performance, low power, scalable|
-| **AI Framework Support**| TensorFlow, PyTorch, ONNX       | TensorFlow, OpenVINO         | TensorFlow Lite                | TensorFlow, PyTorch, ONNX     | TensorFlow, PyTorch           | TensorFlow, PyTorch, Caffe    | TensorFlow Lite, ONNX         | TensorFlow, PyTorch, ONNX      | TensorFlow, PyTorch, ONNX        | TensorFlow, PyTorch, ONNX        | TensorFlow, PyTorch, ONNX   | TensorFlow, ONNX, PyTorch   |
-| **Release Year**        | Varies                          | 2017                         | 2019                           | Varies                        | 2018                          | 2019                          | Varies                          | 2021                          | 2020                            | 2019                            | 2021                         | 2019                        |
+## Comparing the Edge AI processors
 
+| Processor Name | Company | Architecture | Performance (TOPS) | Power Efficiency (TOPS/W) | Supported AI Frameworks | Key Features |
+|----------------|---------|--------------|--------------------|--------------------------|-----------------------|--------------|
+| Jetson AGX Orin | NVIDIA | ARM-based | Up to 275 | Up to 5.5 | TensorRT, CUDA, OpenCV | Multi-modal AI, Advanced robotics capabilities |
+| Apple M1 | Apple | ARM-based | Up to 11 (Neural Engine) | Not publicly specified | Core ML, TensorFlow, PyTorch | Integrated CPU/GPU/Neural Engine, Low power consumption |
+| Movidius Myriad X | Intel | VPU | Up to 4 | Up to 1 | OpenVINO | Computer vision specialized, Low power |
+| Edge TPU | Google | ASIC | Up to 4 | Up to 2 | TensorFlow Lite | Low latency, Coral Dev Board compatibility |
+| Snapdragon 8 Gen 2 | Qualcomm | ARM-based | Up to 18 | Not publicly specified | Qualcomm AI Engine, TensorFlow, PyTorch | 5G integration, Computer vision optimized |
+| Versal AI Edge | Xilinx (AMD) | ACAP | Up to 479 | Not publicly specified | Vitis AI | Adaptive compute acceleration, Customizable |
+| i.MX 8M Plus | NXP | ARM-based | Up to 2.3 | Not publicly specified | NXP eIQ, TensorFlow Lite | Audio/Voice processing, Industrial IoT focus |
+| Hailo-8 | Hailo | ASIC | Up to 26 | Up to 3 | Hailo Software Suite | Structure-defined dataflow architecture |
+| DEEPX DX-P5 | DEEPX | ASIC | Up to 5 | Up to 10 | DEEPX SDK | Ultra-low power, Suitable for battery-powered devices |
+| KL720 | KNERON | NPU | Up to 1.5 | Up to 1.6 | ONNX, TensorFlow Lite | Reconfigurable architecture, Face recognition specialized |
+| CV28 | Ambarella | CVflow | Up to 400 GMACS | Not publicly specified | Caffe, TensorFlow, ONNX | Computer vision optimized, Low power |
+| Mythic M1076 | Mythic | Analog Matrix Processor | Up to 25 | Up to 10 | Mythic SDK | Analog compute-in-memory, High energy efficiency |
+| Ethos-U65 | Arm | microNPU | Up to 0.5 | Up to 5 | Arm NN, TensorFlow Lite | Designed for MCUs, Ultra-low power |
 
-|Brand|Brief Market Share Overview|
+* Performance metrics (TOPS - Trillion Operations Per Second) can vary based on precision (e.g., INT8 vs FP16).
+* Power efficiency can vary greatly depending on the specific use case and configuration.
+* The supported frameworks and key features listed are not exhaustive.
+
+## A general overview of each product's market position based on industry reports and analyst estimates
+
+|Product||
 |-|-|
-|**NVIDIA**|NVIDIA is a dominant player in AI and GPU markets. Their Jetson series is widely adopted in robotics, autonomous machines, and smart city applications. NVIDIA’s strong AI performance and comprehensive software support have secured a significant market share.|
-|**Intel**|Intel’s Movidius Myriad X is a leading product for vision and imaging applications. Intel’s broad market reach and integration with their OpenVINO toolkit have made them a strong competitor in edge AI processing.|
-|**Google**|Google’s Coral Edge TPU is known for its efficiency and cost-effectiveness, particularly in IoT and consumer electronics. Despite being a newer player, Google leverages its extensive AI ecosystem to gain market share.|
-|**Qualcomm**|Qualcomm’s Snapdragon series, especially with its AI Engine, is highly popular in mobile and IoT markets. Qualcomm’s established presence in the mobile industry gives it a substantial market share in AI at the edge.|
-|**Ambarella**|Ambarella specializes in high-performance computer vision, particularly for surveillance and automotive applications. Their CVflow processors are well-regarded in these niche markets.|
-|**Xilinx (now part of AMD)**|Xilinx’s Versal AI Core series offers flexible hardware acceleration and caters to diverse AI applications. Xilinx is known for its adaptable FPGA technology, which has a solid market share in AI and machine learning hardware.|
-|**Arm**|Arm processors are ubiquitous in IoT and embedded systems. Their Cortex-M and Cortex-A series, along with the Ethos-U NPU, are widely used for AI applications at the edge, making Arm a key player in this space.|
-|**Mythic**|Mythic focuses on energy-efficient, high-performance AI processing with their Analog Matrix Processor (AMP). They are carving out a niche market, particularly in smart cameras and wearable technology.|
-|**NXP Semiconductors**|NXP’s i.MX 8M Plus and S32V Vision Processors are strong contenders in industrial and automotive markets. NXP’s extensive experience and broad customer base give it a significant share in edge AI processing.|
-|**Hailo**|Hailo is a relatively new player in the AI processor market but has been making significant strides with its innovative edge AI solutions. The Hailo AI Processors are designed for high performance and energy efficiency, making them suitable for a wide range of applications including smart cities, industry 4.0, and automotive. Hailo has been gaining market share rapidly due to its scalable and cost-effective solutions, and strong performance metrics. Its focus on edge AI processing aligns well with the growing demand for real-time AI inference at the edge, positioning it as a strong competitor in the market.
-|**DEEPX**|DEEPX is an emerging player with a focus on energy-efficient AI processors for edge applications. Their innovative designs are gaining traction, particularly in smart camera and IoT markets. While smaller than some competitors, DEEPX is growing rapidly.|
+|NVIDIA Jetson AGX Orin|NVIDIA is a market leader in AI processors, with a significant share in the high-performance edge AI market, especially in robotics and autonomous vehicles.|
+|Apple M1|While not exclusively an edge AI chip, Apple's market share is substantial due to its integration in all new Macs and some iPads, giving it a large presence in consumer devices.|
+|Intel|Intel's various AI offerings, including Movidius, have a significant market share across different edge AI applications.|
+|Google Edge TPU|Has a niche but growing market share, particularly in IoT and small-scale edge deployments.|
+|Qualcomm Snapdragon|Dominates the mobile device market, with a very large share in smartphones and tablets.
+|Xilinx (AMD) Versal AI Edge|Has a strong presence in the FPGA market, particularly in industrial and automotive applications.|
+|NXP iMX 8M Plus|Well-established in industrial IoT and automotive sectors, with a solid market share in these areas.|
+|Hailo-8|A newer entrant gaining traction, especially in smart city and surveillance applications.|
+|DEEPX DX-P5|An emerging player, focusing on ultra-low power applications.|
+|KNERON KL720|Has been gaining market share in edge AI for security and surveillance applications.|
+|Ambarella CV28|Strong in the security camera and automotive markets, with a growing share in edge AI vision processing.|
+|Mythic M1076|A niche player with innovative technology, but market share is still relatively small.|
+|Arm Ethos-U65|While Arm designs are widespread, this specific NPU is newer and its market share is still growing, primarily in IoT devices.|
+
+* Overall market leaders: NVIDIA and Intel are generally considered the largest players in the edge AI processor market.
+* Qualcomm dominates in mobile devices.
+* Companies like Google, Apple, and AMD/Xilinx have strong positions in specific segments.
+* Smaller, specialized companies like Hailo, DEEPX, and Mythic are growing but have smaller market shares.
 
