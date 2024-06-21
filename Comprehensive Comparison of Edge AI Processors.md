@@ -10,7 +10,7 @@
 | Edge TPU | Google | ASIC | Up to 4 | Up to 2 | TensorFlow Lite | Low latency, Coral Dev Board compatibility |
 | Snapdragon 8 Gen 2 | Qualcomm | ARM-based | Up to 18 | Not publicly specified | Qualcomm AI Engine, TensorFlow, PyTorch | 5G integration, Computer vision optimized |
 | Versal AI Edge | Xilinx (AMD) | ACAP | Up to 479 | Not publicly specified | Vitis AI | Adaptive compute acceleration, Customizable |
-| i.MX 8M Plus | NXP | ARM-based | Up to 2.3 | Not publicly specified | NXP eIQ, TensorFlow Lite | Audio/Voice processing, Industrial IoT focus |
+| iMX 8M Plus | NXP | ARM-based | Up to 2.3 | Not publicly specified | NXP eIQ, TensorFlow Lite | Audio/Voice processing, Industrial IoT focus |
 | Hailo-8 | Hailo | ASIC | Up to 26 | Up to 3 | Hailo Software Suite | Structure-defined dataflow architecture |
 | DEEPX DX-P5 | DEEPX | ASIC | Up to 5 | Up to 10 | DEEPX SDK | Ultra-low power, Suitable for battery-powered devices |
 | KL720 | KNERON | NPU | Up to 1.5 | Up to 1.6 | ONNX, TensorFlow Lite | Reconfigurable architecture, Face recognition specialized |
