@@ -61,7 +61,7 @@ Windows Copilot Runtime introduces new ways to interact with operating systems t
 
 ---
 
-## Comprehensive Comparison of Edge AI Processors
+## [Comprehensive Comparison of Edge AI Processors](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Comprehensive%20Comparison%20of%20Edge%20AI%20Processors.md)
 
 In this article, we provide an in-depth comparison of AI processors designed for edge computing from leading companies including NVIDIA, Intel, Google, Qualcomm, Ambarella, Xilinx, Arm, Mythic, NXP, and DEEPX. 
 
