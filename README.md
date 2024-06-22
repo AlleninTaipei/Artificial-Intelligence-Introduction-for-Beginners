@@ -63,9 +63,18 @@ Windows Copilot Runtime introduces new ways to interact with operating systems t
 
 ## [Comprehensive Comparison of Edge AI Processors](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Comprehensive%20Comparison%20of%20Edge%20AI%20Processors.md)
 
-In this article, we provide an in-depth comparison of AI processors designed for edge computing from leading companies including NVIDIA, Intel, Google, Qualcomm, Ambarella, Xilinx, Arm, Mythic, NXP, and DEEPX. 
+In this article, we provide an in-depth comparison of AI processors designed for edge computing from leading companies including NVIDIA, Intel, Google, Qualcomm, Ambarella, Xilinx, Arm, Mythic, NXP, and DEEPX.
 
 We cover their specifications, target applications, software support, and key strengths, along with a brief market share overview for each. This comparison helps to understand the competitive landscape and the unique offerings of each player in the edge AI processor market.
+
+---
+
+## [AI Engineer - Workflow and Necessary Skills](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/AI%20Engineer%20-%20%20Workflow%20and%20Necessary%20Skills.md)
+
+What exactly does an AI engineer do ? What abilities do they need?
+Are there any requirements for their major?
+
+The head of Elan's artificial intelligence R&D department will answer the questions.
 
 ---
 
