@@ -78,6 +78,13 @@ The head of Elan's artificial intelligence R&D department will answer the questi
 
 ---
 
+## [Introduction to Data Engineers](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Introduction%20to%20Data%20Engineers.md)
+
+What is a data engineer ? There are so many tools to learn ?
+The daily work of a data scientist.
+
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
