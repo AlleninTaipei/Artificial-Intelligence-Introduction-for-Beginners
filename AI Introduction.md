@@ -262,10 +262,6 @@ Here's an example of how RLHF could be implemented using Python, TensorFlow (a p
 * Based on the feedback, we can further process and potentially update the model parameters (not implemented in this example).
 * The loop continues indefinitely, allowing for iterative improvement of the model based on user feedback.
 
-### LoRA: Low-Rank Adaptation of Large Language Models
-
-* An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
-
 ---
 
 ## Build and deploy an AI model
@@ -369,33 +365,37 @@ QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained lang
 **Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
 
 [You can now train a 70b language model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)
-
 [Fully Sharded Data Parallel: faster AI training with fewer GPUs](https://engineering.fb.com/2021/07/15/open-source/fsdp/)
-
 [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
-
 [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
 
 ### QLoRA and FSDP Explained with Chef and Cooking Examples
 
 #### QLoRA
+
 * **Pre-trained Model**: As a master chef, you possess extensive culinary knowledge, capable of preparing a diverse range of dishes.
 * **Quantization**: To enhance efficiency, you store ingredients in smaller, more manageable containers, saving space and resources in your kitchen.
 * **Low-Rank Adaptation**: You make minor adjustments to specific recipes based on customer demands, allowing you to quickly adapt without overhauling your entire skill set.
 * **Summary**: QLoRA is like running an efficient kitchen where you save resources by optimizing storage and make quick, targeted adjustments to meet customer preferences, thus maintaining high performance and adaptability.
 
 #### FSDP
+
 * **Sharding**: You distribute the preparation tasks among your assistant chefs. Each chef is responsible for a specific portion of the work, such as chopping vegetables or marinating meat. Similarly, in FSDP, model parameters are divided into shards and distributed across multiple devices.
 * **Parallel Processing**: All chefs work in parallel on their assigned tasks, communicating as necessary to ensure everything comes together seamlessly. In FSDP, each device processes its shard while synchronizing with others to ensure cohesive training of the model.
 * **Coordination**: You ensure that the assistant chefs’ tasks integrate smoothly, resulting in a well-prepared banquet. In FSDP, devices coordinate to ensure the model training process is unified and complete.
 Summary: FSDP is like managing a large kitchen where tasks are distributed among multiple chefs, each focusing on their part while working in parallel and coordinating efforts to efficiently prepare a grand banquet.
 
 #### Conclusion
+
 * **QLoRA:** Represents efficient resource management and quick adaptation to specific needs in a kitchen, ensuring high performance and responsiveness.
 * **FSDP:** Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
 Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.
 
 ### Techniques for Large Language Model Improvement
+
+#### LoRA: Low-Rank Adaptation of Large Language Models
+
+* An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
 
 #### Attention
 
@@ -448,7 +448,7 @@ If your initial prompt doesn’t return the result you were looking for, let the
 
 * Data Analysis
 * Troubleshooting
-* **Formulas and Functions**
+* Formulas and Functions
 * Data Cleaning
 * Automation
 * Visualization
@@ -456,36 +456,16 @@ If your initial prompt doesn’t return the result you were looking for, let the
 
 ### ChatGPT prompts examples
 
-* Prompt 1: The McKinsey 7S Framework
-Analyze [MY PRODUCT/BUSINESS] using the 7S framework.
-How aligned are our strategy, structure, systems, shared values, skills, style, and staff?
-
-* Prompt 2: Learn Complicated Topics Faster
-Explain [COMPLEX TOPIC] like I’m a 5 year old
-
-* Prompt 3: Business Analysis
-Analyze the current state of the [INDUSTRY] and describe its trends, challenges, and opportunities.
-Support your analysis with relevant data and statistics.
-Additionally, provide a comprehensive list of key players in the industry.
-
-* Prompt 4: The Cynefin Framework
-Evaluate the problems [MY PRODUCT/BUSINESS] faced using the Cynefin Framework.
-Are they simple, complicated, complex, chaotic, or in disorder?
-
-* Prompt 5: Write Copy for Your Business
-Write a 50-word copy for a product called [PRODUCT NAME] that helps struggling [TARGET AUDIENCE] get more followers and earn money in 30 days with a guarantee, then ask them to sign up at [COMPANY].
-
-* Prompt 6: Strengthen your Personal Development Skills
-[ DESCRIBE YOUR PERSONAL DEVELOPMENT GOALS AND CHALLENGES].
-Using the GROW(Goal, Reality, Options, Will) coaching model helped me create a personal development plan to achieve my goals.
-
-* Prompt 7: Create a successful product launch strategy
-[INSERT A BRIEF DESCRIPTION OF YOUR PRODUCT AND TARGET AUDIENCE]
-Guide me through developing a product launch strategy using the Product Launch Formula to generate interest and sales.
-
-* Prompt 8: Get Advice from your Business Idols
-Here is the situation I’m currently facing: [INSERT SITUATION]
-Based on these circumstances, what would [STEVE JOBS]? recommend me to do?
+|Prompt|Example|
+|-|-|
+|**The McKinsey 7S Framework**|Analyze [MY PRODUCT/BUSINESS] using the 7S framework. How aligned are our strategy, structure, systems, shared values, skills, style, and staff?|
+|**Learn Complicated Topics Faster**|Explain [COMPLEX TOPIC] like I’m a 5 year old|
+|**Business Analysis**|Analyze the current state of the [INDUSTRY] and describe its trends, challenges, and opportunities. Support your analysis with relevant data and statistics. Additionally, provide a comprehensive list of key players in the industry.|
+|**The Cynefin Framework**|Evaluate the problems [MY PRODUCT/BUSINESS] faced using the Cynefin Framework. Are they simple, complicated, complex, chaotic, or in disorder?|
+|**Write Copy for Your Business**|Write a 50-word copy for a product called [PRODUCT NAME] that helps struggling [TARGET AUDIENCE] get more followers and earn money in 30 days with a guarantee, then ask them to sign up at [COMPANY].|
+|**Strengthen your Personal Development Skills**|[ DESCRIBE YOUR PERSONAL DEVELOPMENT GOALS AND CHALLENGES]. Using the GROW(Goal, Reality, Options, Will) coaching model helped me create a personal development plan to achieve my goals.|
+|**Create a successful product launch strategy**|[INSERT A BRIEF DESCRIPTION OF YOUR PRODUCT AND TARGET AUDIENCE] Guide me through developing a product launch strategy using the Product Launch Formula to generate interest and sales.|
+|**Get Advice from your Business Idols**|Here is the situation I’m currently facing: [INSERT SITUATION] Based on these circumstances, what would [STEVE JOBS]? recommend me to do?|
 
 ### Use Keywords
 
