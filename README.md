@@ -1,10 +1,12 @@
 # Artificial Intelligence Introduction for Beginners
 
-## [AI Introduction](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/AI%20Introduction.md)
-
 Welcome to the "Artificial Intelligence Introduction for Beginners"! This comprehensive study note is designed to provide a solid foundation in artificial intelligence (AI) for newcomers. Whether you're a student, an aspiring data scientist, or simply curious about AI, this guide will help you understand the basics and build your knowledge step-by-step.
 
 "Artificial Intelligence Introduction for Beginners" covers the fundamental concepts and techniques used in AI. It aims to make complex topics accessible by breaking them down into easy-to-understand segments. You'll learn about the history of AI, core principles, popular algorithms, and practical applications, all illustrated with clear explanations and examples.
+
+## [AI Introduction](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/AI%20Introduction.md)
+
+Understand the basics of Artificial Intelligence including the key concepts and terminology.
 
 ---
 
