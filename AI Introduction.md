@@ -10,11 +10,11 @@
 
 ### Artificial Intelligence
 
-|Aspect|Generative AI|Artificial General Intelligence (AGI) or General AI|
+|AI|Generative AI|Artificial General Intelligence (AGI) or General AI|
 |-|-|-|
 |Definition|Creates data resembling its training|Possesses human-like cognitive abilities|
 |Examples|Generative Adversarial Networks, Large Language Models (e.g., GPT models)|Theoretical, depicted in science fiction|
-|Capabilities||		
+|Capabilities|||
 |- Data Creation|Generates synthetic data|Broad understanding without specific training|
 |- Content|Produces art, music, writing|Adapts to new tasks easily|
 |- Language|Understands and generates human text|Learns autonomously|
@@ -106,7 +106,7 @@
 
 * GPTs are based on the transformer architecture, pre-trained on large datasets of unlabeled text, and capable of generating novel human-like content. As of 2023, most large language models share these characteristics and are often referred to broadly as GPTs.
 * **In November 2022, OpenAI launched ChatGPT**, an online chat interface powered by an instruction-tuned language model. This model was trained similarly to InstructGPT, utilizing **Reinforcement Learning from Human Feedback (RLHF)**. Human AI trainers conducted conversations by playing both the user and the AI, combining this new dialogue dataset with the InstructGPT dataset to create a conversational format suitable for a chatbot.
-*  Microsoft's Bing Chat: Uses OpenAI's GPT-4 as part of a broader close collaboration between OpenAI and Microsoft.
+* Microsoft's Bing Chat: Uses OpenAI's GPT-4 as part of a broader close collaboration between OpenAI and Microsoft.
 * Google's Bard: Initially based on Google's LaMDA family of conversation-trained language models, with plans to transition to their PaLM models.
 
 ---
@@ -169,11 +169,11 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 
 |Advice Activity|Low Temperature (0.2)|High Temperature (2.0)|
 |-|-|-|
-|1. Dinner|Have a romantic dinner at your favorite restaurant.|Host a surprise masquerade ball in your living room.|
-|2. Outdoor Activity|Take a walk in a nearby park or along the beach.|Explore an abandoned building and create an urban adventure.|
-|3. Creative Writing|Write love letters to each other.|Write and perform a love song together on the street.|
-|4. Movie Night|Watch a romantic movie together.|Watch a foreign film without subtitles and make up your own dialogue.|
-|5. Stargazing/Camping|Spend the evening stargazing.|Spend the night camping on the roof and making shadow puppets.|
+|Dinner|Have a romantic dinner at your favorite restaurant.|Host a surprise masquerade ball in your living room.|
+|Outdoor Activity|Take a walk in a nearby park or along the beach.|Explore an abandoned building and create an urban adventure.|
+|Creative Writing|Write love letters to each other.|Write and perform a love song together on the street.|
+|Movie Night|Watch a romantic movie together.|Watch a foreign film without subtitles and make up your own dialogue.|
+|Stargazing/Camping|Spend the evening stargazing.|Spend the night camping on the roof and making shadow puppets.|
 
 ### Large Language Models application customization engineering
 
@@ -186,7 +186,7 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 
 ### Pre-training, fine-tuning and inferencing
 
-|Aspect|Pre-training|Fine-tuning|Inferencing|
+|Compare|Pre-training|Fine-tuning|Inferencing|
 |-|-|-|-|
 |Objective|Train a model on a large dataset to learn general features and patterns|Further train a pre-trained model on a smaller dataset to adapt to a specific task or domain|Apply the trained model to new data to make predictions or generate outputs|
 |Dataset|Large, diverse dataset|Smaller, task-specific dataset|New, unseen data|
