@@ -56,7 +56,7 @@
 
 ### Model Size and Application
 
-|LLaMA 2 (Large Language Model Meta AI)||
+|LLaMA 2|Large Language Model Meta AI|
 |-|-|
 |**Improved Performance**|Enhanced architecture and training techniques to provide better accuracy and efficiency in various NLP tasks.|
 |**Open-Source**|Available for researchers and developers to use, modify, and contribute to, fostering collaboration and innovation in the field of AI.|
@@ -136,8 +136,8 @@
 
 |Technique|Primary Use Case|Key Benefit|Main Drawback|
 |-|-|-|-|
-|[Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
-|[Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)|Reducing memory during backpropagation|Decreases VRAM usage|Increases computational overhead|
+|**Mixed-Precision Training Mechanics**|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
+|**Gradient Checkpointing**|Reducing memory during backpropagation|Decreases VRAM usage|Increases computational overhead|
 |**Sharded Optimizers**|Reducing per-GPU memory usage|Distributes memory load|Complexity in implementation|
 |**LoRA**|Efficient fine-tuning|Lowers VRAM for fine-tuning|May not be applicable for pre-training|
 |**QLoRA**|Efficient fine-tuning with quantization|Further reduces VRAM for fine-tuning|Complexity in implementation|
