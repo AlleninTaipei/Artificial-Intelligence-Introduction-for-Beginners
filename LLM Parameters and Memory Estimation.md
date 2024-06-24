@@ -35,6 +35,141 @@
 |[MAINGEAR SHODAN 192](https://maingear.com/product/pro-ai-shodan-192-reservation/)|70B|192 GB|
 |[Answer.AI](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)|70B|24GB x 2|
 
+### Scaling Laws
+
+* **Scaling laws in the context of LLMs highlight the relationship between the model size, data, and computational resources with the performance and capabilities of the models. While the number of parameters is a major factor, precision, data quality, model architecture, and training techniques also play vital roles. Balancing these elements against their respective challenges and trade-offs is essential for developing and deploying efficient and powerful LLMs.**
+
+* **As models get bigger (more parameters) or are trained on more data, they tend to get better at their tasks in a predictable way.**
+
+* **By framing the information in terms of scaling laws, it becomes clear how each factor contributes to the overall performance and what trade-offs must be considered when <u>scaling up LLMs.</u>**
+
+|Key Factors|Importance|Challenges and Trade-offs|
+|-|-|-|
+|**Number of Parameters**|Larger models with more parameters have a higher capacity to learn and represent complex patterns, which typically results in better performance across a variety of tasks.|Increased computational resources, memory, and processing power are required. There is also a higher cost and environmental impact associated with training larger models.|
+|**Precision**|Precision, especially lower precision computations (like FP16 instead of FP32), helps reduce memory usage and increase computational speed, enabling the training of larger models more efficiently.|Lower precision can lead to numerical instability or reduced accuracy if not managed correctly. Techniques like mixed precision training are employed to balance these issues.|
+|**Data Quality and Quantity**| Both the quality and the quantity of the training data are critical. High-quality and extensive datasets allow models to generalize better and perform well on diverse tasks.|Acquiring high-quality, diverse datasets is challenging and costly. Training a large model on poor-quality data leads to suboptimal performance.|
+|**Architecture and Optimization**|Advances in model architectures (such as Transformer-based models) and optimization techniques (like the Adam optimizer) have significantly enhanced the performance of LLMs.|Continuous innovation requires ongoing research and development. New architectures and optimizers may involve initial implementation challenges and computational costs.|
+|**Training Techniques**|Techniques like transfer learning, fine-tuning, and reinforcement learning from human feedback (RLHF) are crucial for improving model performance and adapting models to specific tasks.|These techniques require additional computational resources and time. Effective application demands expertise and careful management to avoid issues like overfitting.|
+
+* [Stanford cs224n](https://www.youtube.com/watch?v=UFem7xa3Q2Q)
+* [Stanford cs324](https://stanford-cs324.github.io/winter2022/assets/pdfs/Scaling%20laws%20pdf.pdf)
+
+### Model Size and Application
+
+|LLaMA 2 (Large Language Model Meta AI)||
+|-|-|
+|**Improved Performance**|Enhanced architecture and training techniques to provide better accuracy and efficiency in various NLP tasks.|
+|**Open-Source**|Available for researchers and developers to use, modify, and contribute to, fostering collaboration and innovation in the field of AI.|
+|**Scalability**|Designed to handle large-scale datasets and complex language tasks, making it suitable for a wide range of applications.|
+|**Versatility**|Can be used for tasks such as text generation, language translation, summarization, question answering, and more.|
+
+#### LLaMA 2 - 7B
+
+* It is well-suited for applications that require fast response times and can operate on limited computational resources.
+
+|Application|Usage|Benefits|
+|-|-|-|
+|Customer Support Chatbots|Automating responses to common customer inquiries.|Reduces the need for human agents, providing instant support, improving customer satisfaction.|
+|Content Moderation|Filtering and moderating user-generated content on social media platforms.|Ensures community guidelines are followed, reduces manual moderation workload.|
+|Email Filtering and Categorization|Automatically categorizing and prioritizing emails.|Enhances productivity by helping users manage their inbox efficiently.|
+
+|LLaMA 2 - 7B|Description|
+|-|-|
+|[Zendesk Answer Bot](https://www.chatbase.co/?gad_source=1&gclid=Cj0KCQjw9vqyBhCKARIsAIIcLMFMz2-AVPEfakCZOzhWIcRjR7mo1yNR9wRLUFLb2OzCDHyyr2ulzjsaAoWaEALw_wcB)|Automates customer support by providing instant responses to common questions.|
+|[OpenAI Moderation API](https://platform.openai.com/docs/api-reference/moderations)|Helps platforms detect and filter inappropriate content in real-time.|
+|[Google's Gmail Smart Compose](https://support.google.com/mail/answer/9116836?hl=en&co=GENIE.Platform%3DDesktop)|Suggests responses and helps categorize emails, making email management more efficient.|
+
+#### LLaMA 2 - 13B. 
+
+* It offers a balance between performance and resource requirements, suitable for moderately complex tasks.
+
+|Application|Usage|Benefits|
+|-|-|-|
+|Personalized Marketing|Generating personalized marketing content and product recommendations.|Increases engagement and conversion rates by targeting customers with relevant content.|
+|Virtual Personal Assistants|Assisting with scheduling, reminders, and routine tasks.|Improves efficiency and productivity for individuals and professionals.|
+|Sentiment Analysis|Analyzing customer feedback and social media sentiment.|Provides insights into customer opinions, aiding in strategic decision-making.|
+
+|LLaMA 2 - 13B|Description|
+|-|-|
+|[Adobe Experience Cloud](https://business.adobe.com/)|Uses AI to deliver personalized marketing experiences and product recommendations.|
+|[Google Assistant](https://assistant.google.com/)|Assists users with tasks like scheduling, reminders, and information retrieval.|
+|[Brandwatch](https://www.brandwatch.com/)|Analyzes social media and customer feedback to gauge public sentiment and opinions.|
+
+#### LLaMA 2 - 33B.
+
+* It is designed for more complex tasks requiring deeper language understanding and generation capabilities.
+
+|Application|Usage|Benefits|
+|-|-|-|
+|Advanced Document Understanding|Extracting insights and summarizing long documents, legal contracts, and research papers.|Saves time and resources in analyzing detailed and extensive texts.|
+|Automated Content Creation|Generating high-quality articles, reports, and creative writing.|Assists in content marketing and publishing by producing drafts that require minimal editing.|
+|Fraud Detection|Analyzing transactional data and identifying potentially fraudulent activities.|Enhances security and reduces financial losses due to fraud.|
+
+|LLaMA 2 - 33B|Description|
+|-|-|
+|[Kira Systems](https://kirasystems.com/)|Uses AI to extract information from legal documents and contracts, aiding legal professionals.|
+|[Copy.ai](https://www.copy.ai/)|Description: Generates marketing copy, blog posts, and other content, reducing the workload for content creators.|
+|[Darktrace](https://darktrace.com/)|Utilizes AI to detect and respond to cyber threats and potential fraud in real-time.|
+
+#### LLaMA 2 - 70B. 
+
+* The 70B model, being the most powerful, is ideal for highly complex and resource-intensive tasks.
+
+|Application|Usage|Benefits|
+|-|-|-|
+|Comprehensive AI Research and Development|Building and testing sophisticated AI models and simulations.|Advances innovation in AI technology, pushing the boundaries of what's possible.|
+|Language Translation and Localization|Providing high-accuracy translations for multiple languages, including context-specific nuances.|Enables global businesses to communicate effectively across different regions and cultures.|
+|In-Depth Predictive Analytics|Analyzing large datasets to forecast trends and behaviors.|Assists in strategic planning and decision-making with high accuracy.|
+
+|LLaMA 2 - 70B|Description|
+|-|-|
+|[DeepL Translator](https://www.deepl.com/translator)|Provides highly accurate translations, taking into account context and nuances in multiple languages.|
+|[IBM Watson](https://www.ibm.com/watson)|Offers predictive analytics solutions across various industries, including healthcare and finance, to forecast trends and behaviors.|
+
+---
+
+## Memory Optimization Techniques for Efficient Model Training
+
+* **By leveraging these techniques, you can achieve state-of-the-art model performance without the need for extremely high-end hardware, making advanced AI more accessible and practical.**
+
+* **This collective term and explanation provide a clear and concise way to communicate the benefits of these advanced techniques to buyers, emphasizing both their practical applications and their cost-saving advantages.**
+
+|Technique|Primary Use Case|Key Benefit|Main Drawback|
+|-|-|-|-|
+|[Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
+|[Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)|Reducing memory during backpropagation|Decreases VRAM usage|Increases computational overhead|
+|**Sharded Optimizers**|Reducing per-GPU memory usage|Distributes memory load|Complexity in implementation|
+|**LoRA**|Efficient fine-tuning|Lowers VRAM for fine-tuning|May not be applicable for pre-training|
+|**QLoRA**|Efficient fine-tuning with quantization|Further reduces VRAM for fine-tuning|Complexity in implementation|
+|**Model Parallelism**|Handling large models|Enables training of very large models|Increases inter-GPU communication overhead|
+|**Data Parallelism**|Distributing data across GPUs|Simple and scalable approach|Synchronization overhead|
+|**Tensor Parallelism**|Splitting tensors across GPUs|Efficient use of GPU resources|Complexity in implementation|
+|**Offloading**|Using CPU or NVMe for storage|Extends memory capacity beyond GPU VRAM|Latency due to data transfer|
+|**Activation Quantization**|Reducing memory usage|Lowers VRAM by reducing activation precision|Potential loss in model accuracy|
+|**ZeRO (Zero Redundancy Optimizer)**|Memory-efficient optimization|Drastically reduces memory footprint|Requires advanced implementation|
+
+### [Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)
+
+* **It’s called “mixed-“ rather than “low-“precision training because we don’t transfer all parameters and operations to 16-bit floats. Instead, we switch between 32-bit and 16-bit operations during training, hence, the term “mixed” precision.**
+
+|Step|Processed|
+|-|-|
+|1. Convert weights to FP16|The weights (or parameters) of the neural network, which are initially in FP32 format, are converted to lower-precision FP16 format. This reduces the memory footprint and allows for faster computation, as FP16 operations require less memory and can be processed more quickly by the hardware.|
+|2. Compute gradients|The forward and backward passes of the neural network are performed using the lower-precision FP16 weights. This step calculates the gradients (partial derivatives) of the loss function with respect to the network’s weights, which are used to update the weights during the optimization process.|
+|3. Convert gradients to FP32|After computing the gradients in FP16, they are converted back to the higher-precision FP32 format. This conversion is essential for maintaining numerical stability and avoiding issues such as vanishing or exploding gradients that can occur when using lower-precision arithmetic.|
+|4. Multiply by learning rate and update weights|Now in FP32 format, the gradients are multiplied by a learning rate (a scalar value that determines the step size during optimization).|
+|Final. FP32 Weights|The product from step 4 is then used to update the original FP32 neural network weights. The learning rate helps control the convergence of the optimization process and is crucial for achieving good performance.|
+
+### [Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)
+
+* **Memory Usage in Backpropagation: Standard backpropagation stores all activations, leading to memory usage that scales linearly with the number of layers.**
+* **Only a subset of activations (checkpoints) are kept in memory. Nodes between checkpoints are recomputed during the backward pass, reducing memory usage. For example, if a neural network has 100 layers, checkpoints would be placed approximately every 10 layers.**
+* **Additional computation time is around 20%, allowing models more than 10x larger to fit onto a GPU.**
+
+### [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+
+* An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
+
 ### Practical understanding of the ideal and maximum size of Large Language Models
 
 |Memory Optimization Techniques Applied|Principle|
@@ -68,163 +203,40 @@
 
 ---
 
-## Model Size and Application
+## Train a 70b model on two 24GB GPUs
 
-### LLaMA 2 (Large Language Model Meta AI)
+*We’re releasing an open source system, based on FSDP and QLoRA, that can train a 70b model on two 24GB GPUs.* - Answer.AI, Tim Dettmers (U Washington), and Hugging Face’s Titus von Koeller and Sourab Mangrulkar.
 
-* Improved Performance: Enhanced architecture and training techniques to provide better accuracy and efficiency in various NLP tasks.
-* Open-Source: Available for researchers and developers to use, modify, and contribute to, fostering collaboration and innovation in the field of AI.
-* Scalability: Designed to handle large-scale datasets and complex language tasks, making it suitable for a wide range of applications.
-* Versatility: Can be used for tasks such as text generation, language translation, summarization, question answering, and more.
+* Meta’s PyTorch team
+Fully Sharded Data Parallel (FSDP) is the newest tool we’re introducing. It shards an AI model’s parameters across data parallel workers and can optionally offload part of the training computation to the CPUs.
 
-### LLaMA 2 - 7B
+* Tim Dettmers et al
+QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
+**Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
 
-* It is well-suited for applications that require fast response times and can operate on limited computational resources.|
+* [You can now train a 70b language model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)
+* [Fully Sharded Data Parallel: faster AI training with fewer GPUs](https://engineering.fb.com/2021/07/15/open-source/fsdp/)
+* [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
 
-|Application|Usage|Benefits|
-|-|-|-|
-|Customer Support Chatbots|Automating responses to common customer inquiries.|Reduces the need for human agents, providing instant support, improving customer satisfaction.|
-|Content Moderation|Filtering and moderating user-generated content on social media platforms.|Ensures community guidelines are followed, reduces manual moderation workload.|
-|Email Filtering and Categorization|Automatically categorizing and prioritizing emails.|Enhances productivity by helping users manage their inbox efficiently.|
+### QLoRA and FSDP Explained with Chef and Cooking Examples
 
-### LLaMA 2 - 13B
-
-* It offers a balance between performance and resource requirements, suitable for moderately complex tasks.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Personalized Marketing|Generating personalized marketing content and product recommendations.|Increases engagement and conversion rates by targeting customers with relevant content.|
-|Virtual Personal Assistants|Assisting with scheduling, reminders, and routine tasks.|Improves efficiency and productivity for individuals and professionals.|
-|Sentiment Analysis|Analyzing customer feedback and social media sentiment.|Provides insights into customer opinions, aiding in strategic decision-making.|
-
-### LLaMA 2 - 33B
-
-* It is designed for more complex tasks requiring deeper language understanding and generation capabilities.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Advanced Document Understanding|Extracting insights and summarizing long documents, legal contracts, and research papers.|Saves time and resources in analyzing detailed and extensive texts.|
-|Automated Content Creation|Generating high-quality articles, reports, and creative writing.|Assists in content marketing and publishing by producing drafts that require minimal editing.|
-|Fraud Detection|Analyzing transactional data and identifying potentially fraudulent activities.|Enhances security and reduces financial losses due to fraud.|
-
-### LLaMA 2 - 70B
-
-* The 70B model, being the most powerful, is ideal for highly complex and resource-intensive tasks.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Comprehensive AI Research and Development|Building and testing sophisticated AI models and simulations.|Advances innovation in AI technology, pushing the boundaries of what's possible.|
-|Language Translation and Localization|Providing high-accuracy translations for multiple languages, including context-specific nuances.|Enables global businesses to communicate effectively across different regions and cultures.|
-|In-Depth Predictive Analytics|Analyzing large datasets to forecast trends and behaviors.|Assists in strategic planning and decision-making with high accuracy.|
-
-### Real Business Model Application
-
-|LLaMA 2 - 7B|Description|
+|QLoRA|Chef and Cooking|
 |-|-|
-|[Zendesk Answer Bot](https://www.chatbase.co/?gad_source=1&gclid=Cj0KCQjw9vqyBhCKARIsAIIcLMFMz2-AVPEfakCZOzhWIcRjR7mo1yNR9wRLUFLb2OzCDHyyr2ulzjsaAoWaEALw_wcB)|Automates customer support by providing instant responses to common questions.|
-|[OpenAI Moderation API](https://platform.openai.com/docs/api-reference/moderations)|Helps platforms detect and filter inappropriate content in real-time.|
-|[Google's Gmail Smart Compose](https://support.google.com/mail/answer/9116836?hl=en&co=GENIE.Platform%3DDesktop)|Suggests responses and helps categorize emails, making email management more efficient.|
+|**Pre-trained Model**|As a master chef, you possess extensive culinary knowledge, capable of preparing a diverse range of dishes.|
+|**Quantization**|To enhance efficiency, you store ingredients in smaller, more manageable containers, saving space and resources in your kitchen.|
+|**Low-Rank Adaptation**|You make minor adjustments to specific recipes based on customer demands, allowing you to quickly adapt without overhauling your entire skill set.|
+|**Summary**|QLoRA is like running an efficient kitchen where you save resources by optimizing storage and make quick, targeted adjustments to meet customer preferences, thus maintaining high performance and adaptability.|
 
-|LLaMA 2 - 13B|Description|
+|FSDP|Chef and Cooking|
 |-|-|
-|[Adobe Experience Cloud](https://business.adobe.com/)|Uses AI to deliver personalized marketing experiences and product recommendations.|
-|[Google Assistant](https://assistant.google.com/)|Assists users with tasks like scheduling, reminders, and information retrieval.|
-|[Brandwatch](https://www.brandwatch.com/)|Analyzes social media and customer feedback to gauge public sentiment and opinions.|
+|**Sharding**|You distribute the preparation tasks among your assistant chefs. Each chef is responsible for a specific portion of the work, such as chopping vegetables or marinating meat. Similarly, in FSDP, model parameters are divided into shards and distributed across multiple devices.|
+|**Parallel Processing**|All chefs work in parallel on their assigned tasks, communicating as necessary to ensure everything comes together seamlessly. In FSDP, each device processes its shard while synchronizing with others to ensure cohesive training of the model.|
+|**Coordination**|You ensure that the assistant chefs’ tasks integrate smoothly, resulting in a well-prepared banquet. In FSDP, devices coordinate to ensure the model training process is unified and complete.|
+|**Summary**|FSDP is like managing a large kitchen where tasks are distributed among multiple chefs, each focusing on their part while working in parallel and coordinating efforts to efficiently prepare a grand banquet.|
 
-|LLaMA 2 - 33B|Description|
-|-|-|
-|[Kira Systems](https://kirasystems.com/)|Uses AI to extract information from legal documents and contracts, aiding legal professionals.|
-|[Copy.ai](https://www.copy.ai/)|Description: Generates marketing copy, blog posts, and other content, reducing the workload for content creators.|
-|[Darktrace](https://darktrace.com/)|Utilizes AI to detect and respond to cyber threats and potential fraud in real-time.|
-
-|LLaMA 2 - 70B|Description|
-|-|-|
-|[DeepL Translator](https://www.deepl.com/translator)|Provides highly accurate translations, taking into account context and nuances in multiple languages.|
-|[IBM Watson](https://www.ibm.com/watson)|Offers predictive analytics solutions across various industries, including healthcare and finance, to forecast trends and behaviors.|
-
----
-
-## Building LLM Superstation on AMD Instinct GPUs
-
-* **Lamini makes AMD Instinct GPUs available through the LLM Superstation in both desktop and rack-mount server configurations.**
-
-[ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
-
-[LLM Superstation](https://www.lamini.ai/blog/lamini-llm-finetuning-on-amd-rocm-a-technical-recipe)
-
----
-
-## Memory Optimization Techniques for Efficient Model Training
-
-* **By leveraging these techniques, you can achieve state-of-the-art model performance without the need for extremely high-end hardware, making advanced AI more accessible and practical.**
-
-* **This collective term and explanation provide a clear and concise way to communicate the benefits of these advanced techniques to buyers, emphasizing both their practical applications and their cost-saving advantages.**
-
-|Technique|Primary Use Case|Key Benefit|Main Drawback|
-|-|-|-|-|
-|[Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
-|[Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)|Reducing memory during backpropagation|Decreases VRAM usage|Increases computational overhead|
-|**Sharded Optimizers**|Reducing per-GPU memory usage|Distributes memory load|Complexity in implementation|
-|**LoRA**|Efficient fine-tuning|Lowers VRAM for fine-tuning|May not be applicable for pre-training|
-|**QLoRA**|Efficient fine-tuning with quantization|Further reduces VRAM for fine-tuning|Complexity in implementation|
-|**Model Parallelism**|Handling large models|Enables training of very large models|Increases inter-GPU communication overhead|
-|**Data Parallelism**|Distributing data across GPUs|Simple and scalable approach|Synchronization overhead|
-|**Tensor Parallelism**|Splitting tensors across GPUs|Efficient use of GPU resources|Complexity in implementation|
-|**Offloading**|Using CPU or NVMe for storage|Extends memory capacity beyond GPU VRAM|Latency due to data transfer|
-|**Activation Quantization**|Reducing memory usage|Lowers VRAM by reducing activation precision|Potential loss in model accuracy|
-|**ZeRO (Zero Redundancy Optimizer)**|Memory-efficient optimization|Drastically reduces memory footprint|Requires advanced implementation|
-
----
-
-### Scaling Laws
-
-* **Scaling laws in the context of LLMs highlight the relationship between the model size, data, and computational resources with the performance and capabilities of the models. While the number of parameters is a major factor, precision, data quality, model architecture, and training techniques also play vital roles. Balancing these elements against their respective challenges and trade-offs is essential for developing and deploying efficient and powerful LLMs.**
-
-* **As models get bigger (more parameters) or are trained on more data, they tend to get better at their tasks in a predictable way.**
-
-* **By framing the information in terms of scaling laws, it becomes clear how each factor contributes to the overall performance and what trade-offs must be considered when <u>scaling up LLMs.</u>**
-
-|Key Factors|Importance|Challenges and Trade-offs|
-|-|-|-|
-|**Number of Parameters**|Larger models with more parameters have a higher capacity to learn and represent complex patterns, which typically results in better performance across a variety of tasks.|Increased computational resources, memory, and processing power are required. There is also a higher cost and environmental impact associated with training larger models.|
-|**Precision**|Precision, especially lower precision computations (like FP16 instead of FP32), helps reduce memory usage and increase computational speed, enabling the training of larger models more efficiently.|Lower precision can lead to numerical instability or reduced accuracy if not managed correctly. Techniques like mixed precision training are employed to balance these issues.|
-|**Data Quality and Quantity**| Both the quality and the quantity of the training data are critical. High-quality and extensive datasets allow models to generalize better and perform well on diverse tasks.|Acquiring high-quality, diverse datasets is challenging and costly. Training a large model on poor-quality data leads to suboptimal performance.|
-|**Architecture and Optimization**|Advances in model architectures (such as Transformer-based models) and optimization techniques (like the Adam optimizer) have significantly enhanced the performance of LLMs.|Continuous innovation requires ongoing research and development. New architectures and optimizers may involve initial implementation challenges and computational costs.|
-|**Training Techniques**|Techniques like transfer learning, fine-tuning, and reinforcement learning from human feedback (RLHF) are crucial for improving model performance and adapting models to specific tasks.|These techniques require additional computational resources and time. Effective application demands expertise and careful management to avoid issues like overfitting.|
-
-* [Stanford cs224n](https://www.youtube.com/watch?v=UFem7xa3Q2Q)
-* [Stanford cs324](https://stanford-cs324.github.io/winter2022/assets/pdfs/Scaling%20laws%20pdf.pdf)
-
----
-
-### [Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)
-
-* **It’s called “mixed-“ rather than “low-“precision training because we don’t transfer all parameters and operations to 16-bit floats. Instead, we switch between 32-bit and 16-bit operations during training, hence, the term “mixed” precision.**
-
-|Step|Processed|
-|-|-|
-|1. Convert weights to FP16|The weights (or parameters) of the neural network, which are initially in FP32 format, are converted to lower-precision FP16 format. This reduces the memory footprint and allows for faster computation, as FP16 operations require less memory and can be processed more quickly by the hardware.|
-|2. Compute gradients|The forward and backward passes of the neural network are performed using the lower-precision FP16 weights. This step calculates the gradients (partial derivatives) of the loss function with respect to the network’s weights, which are used to update the weights during the optimization process.|
-|3. Convert gradients to FP32|After computing the gradients in FP16, they are converted back to the higher-precision FP32 format. This conversion is essential for maintaining numerical stability and avoiding issues such as vanishing or exploding gradients that can occur when using lower-precision arithmetic.|
-|4. Multiply by learning rate and update weights|Now in FP32 format, the gradients are multiplied by a learning rate (a scalar value that determines the step size during optimization).|
-|Final. FP32 Weights|The product from step 4 is then used to update the original FP32 neural network weights. The learning rate helps control the convergence of the optimization process and is crucial for achieving good performance.|
-
-### [Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)
-
-* **Memory Usage in Backpropagation: Standard backpropagation stores all activations, leading to memory usage that scales linearly with the number of layers.**
-* **Only a subset of activations (checkpoints) are kept in memory. Nodes between checkpoints are recomputed during the backward pass, reducing memory usage. For example, if a neural network has 100 layers, checkpoints would be placed approximately every 10 layers.**
-* **Additional computation time is around 20%, allowing models more than 10x larger to fit onto a GPU.**
-
-### Epoch
-
-* **One complete pass through the entire training dataset.**
-* **During an epoch, every example in the training dataset is processed once. If the dataset has 1 million examples and the batch size is 1,000, then 1,000 iterations are required to complete one epoch (1 million examples / 1,000 examples per batch).**
-
-### Predictive accuracy (often shortened to "predictive-acc.")
-
-* **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
-* **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
-* **Comparative Measure:** It allows for the comparison of different models or different versions of the same model to determine which performs better on the task at hand.
+* **QLoRA:** Represents efficient resource management and quick adaptation to specific needs in a kitchen, ensuring high performance and responsiveness.
+* **FSDP:** Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
+Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.
 
 ---
 
@@ -234,6 +246,14 @@
 |-|-|-|-|-|-|
 |AMD|Radeon RX 7900 XT|**Radeon RX 7900 XTX**|Radeon Pro W7800|Radeon Pro W7900|MI300 (128GB or 192GB)|
 |Nvida|RTX A4500, RTX 4000 Ada|RTX 4090, RTX A5000, RTX A5500, RTX 4500 Ada|RTX 5000 Ada|RTX A6000, RTX 6000 Ada, RTX 5880 Ada|H100 (80GB)|
+
+### Building LLM Superstation on AMD Instinct GPUs
+
+* **Lamini makes AMD Instinct GPUs available through the LLM Superstation in both desktop and rack-mount server configurations.**
+
+[ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
+
+[LLM Superstation](https://www.lamini.ai/blog/lamini-llm-finetuning-on-amd-rocm-a-technical-recipe)
 
 ### NVLink VRAM Pooling
 
@@ -253,7 +273,7 @@
 
 *  **Consumer graphics cards like the RTX 4080 and RTX 4090 do not support NVLink. The RTX 3090 is the last in the consumer lineup to support NVLink.** This means you cannot utilize NVLink for VRAM pooling with the newer RTX 40 series consumer cards.
 
-### Two RTX 4090 GPUs = 48GB ?
+### Two RTX 4090 GPUs = 24GB x 2 = 48GB ?
 
 |Data Distribution|It doesn't increase the VRAM available for a single model instance. Instead, it allows you to distribute the workload, making better use of the combined memory resources.|
 |-|-|

@@ -55,8 +55,8 @@
 
 ### Key Differences Between Machine Learning And Deep Learning
 
-| |Machine Learning|Deep Learning|
-|-|----------------|-------------|
+|Compare|Machine Learning|Deep Learning|
+|-|-|-|
 |Approach|Requires structured data|Rely on neural networks to process data|
 |Human Intervention|Requires human intervention for mistakes|Neural networks are capable of learning from their mistakes|
 |Hardware|Can function on CPUs|Requires GPUs and significant computing power|
@@ -353,47 +353,18 @@ For a dataset with 1000 samples and a batch size of 32, there will be 32 iterati
 * **Training Speed:** Larger batches allow for more efficient computation, often leveraging optimized hardware like GPUs. Smaller batches might slow down training due to less efficient hardware utilization.
 * **Convergence and Stability:** Larger batches tend to provide more stable and smooth convergence. Smaller batches can introduce more noise into the gradient descent process, which might help the model escape local minima but can also lead to instability.
 
-### Train a 70b model on two 24GB GPUs
+#### Understanding Epoch
 
-*We’re releasing an open source system, based on FSDP and QLoRA, that can train a 70b model on two 24GB GPUs.* - Answer.AI, Tim Dettmers (U Washington), and Hugging Face’s Titus von Koeller and Sourab Mangrulkar.
+* **One complete pass through the entire training dataset.**
+* **During an epoch, every example in the training dataset is processed once. If the dataset has 1 million examples and the batch size is 1,000, then 1,000 iterations are required to complete one epoch (1 million examples / 1,000 examples per batch).**
 
-* Meta’s PyTorch team
-Fully Sharded Data Parallel (FSDP) is the newest tool we’re introducing. It shards an AI model’s parameters across data parallel workers and can optionally offload part of the training computation to the CPUs.
+#### Predictive accuracy (often shortened to "predictive-acc.")
 
-* Tim Dettmers et al
-QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
-**Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
+* **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
+* **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
+* **Comparative Measure:** It allows for the comparison of different models or different versions of the same model to determine which performs better on the task at hand.
 
-* [You can now train a 70b language model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)
-* [Fully Sharded Data Parallel: faster AI training with fewer GPUs](https://engineering.fb.com/2021/07/15/open-source/fsdp/)
-* [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
 * [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
-
-### QLoRA and FSDP Explained with Chef and Cooking Examples
-
-#### QLoRA
-
-* **Pre-trained Model**: As a master chef, you possess extensive culinary knowledge, capable of preparing a diverse range of dishes.
-* **Quantization**: To enhance efficiency, you store ingredients in smaller, more manageable containers, saving space and resources in your kitchen.
-* **Low-Rank Adaptation**: You make minor adjustments to specific recipes based on customer demands, allowing you to quickly adapt without overhauling your entire skill set.
-* **Summary**: QLoRA is like running an efficient kitchen where you save resources by optimizing storage and make quick, targeted adjustments to meet customer preferences, thus maintaining high performance and adaptability.
-
-#### FSDP
-
-* **Sharding**: You distribute the preparation tasks among your assistant chefs. Each chef is responsible for a specific portion of the work, such as chopping vegetables or marinating meat. Similarly, in FSDP, model parameters are divided into shards and distributed across multiple devices.
-* **Parallel Processing**: All chefs work in parallel on their assigned tasks, communicating as necessary to ensure everything comes together seamlessly. In FSDP, each device processes its shard while synchronizing with others to ensure cohesive training of the model.
-* **Coordination**: You ensure that the assistant chefs’ tasks integrate smoothly, resulting in a well-prepared banquet. In FSDP, devices coordinate to ensure the model training process is unified and complete.
-Summary: FSDP is like managing a large kitchen where tasks are distributed among multiple chefs, each focusing on their part while working in parallel and coordinating efforts to efficiently prepare a grand banquet.
-
-#### Conclusion
-
-* **QLoRA:** Represents efficient resource management and quick adaptation to specific needs in a kitchen, ensuring high performance and responsiveness.
-* **FSDP:** Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
-Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.
-
-#### LoRA: Low-Rank Adaptation of Large Language Models
-
-* An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
 
 ---
 
