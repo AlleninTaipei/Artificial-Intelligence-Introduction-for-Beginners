@@ -30,3 +30,23 @@
 |AI for Content Creation|RTX AI acceleration integrated into creative apps, boosting performance. The RTX AI Toolkit helps developers customize and deploy AI models on RTX AI PCs.|
 |New G-SYNC Compatible Displays|Acer introduced new Predator monitors with OLED displays and high refresh rates. Additional G-SYNC Compatible displays from ASUS, Lenovo, LG, and Philips will be available.|
 |Windows Copilot Runtime|Collaboration with Microsoft to bring GPU-accelerated small language models to Windows apps, enabling content summarization, generation, and task automation.|
+
+## Gigabyte AI TOP
+
+|Key Components|Brief Spec|
+|-|-|
+|**TRX 50 AI Top**|4 PCI Express 5.0 x 16<br>8 RDIMM DDR5, up to 2TB|
+|**W790 AI Top**|5 PCI Express 5.0 x 16<br>Supports up to 2TB RDIMM<br>6 M.2 slots<br>Two Thunderbolt 4 Type-C connectors|
+|**GeForce RTX 4070 TI Super AI Top 16G**|Single 1600W PSU can handle four GPUs<br>64GB VRAM with four GPUs installed<br>4-year warranty|
+|**AMD Radeon Pro Series**|W 77900 AI Top 48G and W 7800 AI Top 32G<br>Two-slot turbo fan design<br>4-year extended warranty|
+|**AI Top 100E SSD**|Capacity: 2TB and 1TB<br>7200 MB/s read, 6500 MB/s write<br>150x total bytes written compared to regular SSDs<br>5-year warranty|
+|**UD 1600 PM PG5 AI Top PSU**|Output: 1600W<br>Testing: 24-hour continuous output stress test<br>Compatibility: Supports four PCIe 5.0 12V high power connectors<br>Certification: 80 Plus Platinum<br>10-year warranty|
+
+|User Level|Configuration|Capabilities|Price|
+|-|-|-|-|
+|Students, Especially Postgraduates Majoring in E.E. Personal Studio like YouTubers or live streamer.|Two 4070 TI Super AI Top GPUs and 128 GB of RAM|Ideal for fine-tuning 8B models, supporting up to 30 billion parameters. Fine-tunes a 30B sample model with a 100K dataset in around 288 hours|$6,499|
+|Intermediate Users like Educational Research Institutes and Startups|Two GeForce RTX 4090 GPUs and 256 GB of RAM|Ideal for fine-tuning 30B models, supporting up to 70 billion parameters. Fine-tunes a 13B sample model with a 100K dataset in 32 hours|$11,999|
+|Advanced Business-Level Tasks|Four 4070 TI Super AI Top GPUs and 512 GB of RAM	Handles 30B models, supporting up to 110 billion parameters.|Fine-tunes a 100K dataset in less than a day.|$16,499|
+|Expert-Level Usage|Four W7900 AI to 48G GPUs and 1 TB of RAM|Easily handles 70B model sizes, capable of training up to 236 billion parameters. Fine-tunes a 100K dataset efficiently.|$35,999|
+
+

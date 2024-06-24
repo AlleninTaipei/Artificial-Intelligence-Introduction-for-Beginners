@@ -21,8 +21,9 @@ Added the Artificial Intelligence Index Report 2024 to the repository. Provide a
 ## [Windows AI PC](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Windows%20AI%20PC.md)
 
 Microsoft wants to bring generative AI to the forefront of Windows — and the PCs running it.
+Provide a simple table to explain the general concept of Copilot+ PCs.
 
-I added a simple table to explain the general concept of Copilot+ PCs.
+The other Windows AI PC examples are RTX AI PC and Gigabyte AI TOP.
 
 ---
 
