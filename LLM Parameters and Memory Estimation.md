@@ -180,6 +180,8 @@
 
 * **Scaling laws in the context of LLMs highlight the relationship between the model size, data, and computational resources with the performance and capabilities of the models. While the number of parameters is a major factor, precision, data quality, model architecture, and training techniques also play vital roles. Balancing these elements against their respective challenges and trade-offs is essential for developing and deploying efficient and powerful LLMs.**
 
+* **As models get bigger (more parameters) or are trained on more data, they tend to get better at their tasks in a predictable way.**
+
 * **By framing the information in terms of scaling laws, it becomes clear how each factor contributes to the overall performance and what trade-offs must be considered when <u>scaling up LLMs.</u>**
 
 |Key Factors|Importance|Challenges and Trade-offs|
