@@ -364,10 +364,10 @@ Fully Sharded Data Parallel (FSDP) is the newest tool we’re introducing. It sh
 QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
 **Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
 
-[You can now train a 70b language model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)
-[Fully Sharded Data Parallel: faster AI training with fewer GPUs](https://engineering.fb.com/2021/07/15/open-source/fsdp/)
-[QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
-[LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
+* [You can now train a 70b language model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)
+* [Fully Sharded Data Parallel: faster AI training with fewer GPUs](https://engineering.fb.com/2021/07/15/open-source/fsdp/)
+* [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
+* [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
 
 ### QLoRA and FSDP Explained with Chef and Cooking Examples
 
@@ -391,17 +391,9 @@ Summary: FSDP is like managing a large kitchen where tasks are distributed among
 * **FSDP:** Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
 Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.
 
-### Techniques for Large Language Model Improvement
-
 #### LoRA: Low-Rank Adaptation of Large Language Models
 
 * An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
-
-#### Attention
-
-* **Flash-Decoding**, developed by Stanford researchers, tackles inefficiency in traditional Large Language Models by speeding up the attention mechanism, particularly in tasks requiring long sequences. It achieves this by parallelizing the loading of keys and values, then separately rescaling and combining them to maintain right attention outputs. In various tests, Flash-Decoding outperforms other leading methods like PyTorch Eager and FlashAttention-2, showing much faster inference: 
-For example, on a 256 batch size and 256 sequence length, Flash-Decoding is 48 times faster than PyTorch Eager and six times faster than FlashAttention-2.  Inference on models like ChatGPT can cost 0.01 per response, which can become highly expensive when deploying such models to millions of users. 
-**Innovations like Flash-Decoding are critical for reducing inference costs in AI.**
 
 ---
 
