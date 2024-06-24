@@ -33,6 +33,8 @@
 
 ## Gigabyte AI TOP
 
+* [Source:](https://www.youtube.com/watch?v=Vx4VaXxD-_Y) *GIGABYTE AI TOP Computex2024*
+
 |Key Components|Brief Spec|
 |-|-|
 |**TRX 50 AI Top**|4 PCI Express 5.0 x 16<br>8 RDIMM DDR5, up to 2TB|
