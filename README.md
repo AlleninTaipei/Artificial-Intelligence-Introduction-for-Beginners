@@ -49,9 +49,6 @@ For businesses, this not only translates to cost savings but also aligns with gl
 
 ## [A Comprehensive Overview from Training to Inference](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/A%20Comprehensive%20Overview%20from%20Training%20to%20Inference.md)
 
-Understanding LLMs: A Comprehensive Overview from Training to Inference
-[arXiv:2401.02038v2 [cs.CL] 06 Jan 2024](https://arxiv.org/html/2401.02038v2/#S4)
-
 Have a comprehensive overview of LLMs training and inference techniques to equip researchers with the knowledge required for developing, deploying, and applying LLMs.
 
 ---
