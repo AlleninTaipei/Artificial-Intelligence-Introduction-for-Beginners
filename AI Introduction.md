@@ -357,6 +357,11 @@ For a dataset with 1000 samples and a batch size of 32, there will be 32 iterati
 
 * **One complete pass through the entire training dataset.**
 * **During an epoch, every example in the training dataset is processed once. If the dataset has 1 million examples and the batch size is 1,000, then 1,000 iterations are required to complete one epoch (1 million examples / 1,000 examples per batch).**
+* A **batch** refers to a set of samples used during the training of a model. The model is updated after every batch is processed. If we define for example a batch of size 5. For every 5 samples of the MNIST dataset, the digits predicted are compared to the expected ones and an error is calculated.
+* **Batch gradient descent** is when the batch size equals the size of the training set.
+* **Stochastic Gradient Descent:** As explained above, SGD is when the batch size equals 1.
+* **Mini-Batch Gradient Descent:** Finally, mini-batch gradient descent is when the batch size is greater than 1 but strictly smaller than the dataset size.
+That is to say: 1 < Batch Size < Dataset size
 
 #### Predictive accuracy (often shortened to "predictive-acc.")
 
