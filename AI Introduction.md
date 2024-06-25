@@ -100,7 +100,7 @@
 |Generative Adversarial Networks (GAN)|Consisting of a generator and a discriminator, GANs are used for tasks like image generation, style transfer, and data augmentation. The generator creates data, while the discriminator evaluates its authenticity.|
 |Recurrent Neural Networks (RNN)|Connections form cycles, allowing feedback loops. Suitable for tasks involving sequences, such as language processing, time series prediction, and speech recognition.|
 |Long Short-Term Memory Networks (LSTM)|A type of RNN, LSTMs are designed to handle long-term dependencies and sequence data, known for their ability to remember information for extended periods. Commonly used in tasks like language modeling and machine translation.|
-|**Transformer**|The Transformer model is a deep learning model that adopts a self-attention mechanism, primarily used in Natural Language Processing (NLP) and increasingly in Computer Vision (CV). It allows for the handling of long-range dependencies more effectively than RNNs. **Introduced in the paper "Attention Is All You Need" by Google in 2017.**|
+|**Transformer**|The Transformer model is a deep learning model that adopts a self-attention mechanism, primarily used in Natural Language Processing (NLP) and increasingly in Computer Vision (CV). It allows for the handling of long-range dependencies more effectively than RNNs. **Introduced in the paper "[Attention Is All You Need](https://arxiv.org/abs/1706.03762)" by Google in 2017.**|
 
 ### Generative Pre-trained Transformers (GPT)
 
