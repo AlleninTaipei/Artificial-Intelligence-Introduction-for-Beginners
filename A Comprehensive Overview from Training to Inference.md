@@ -1,6 +1,6 @@
 # Understanding LLMs: A Comprehensive Overview from Training to Inference
 
-* [Source:](arXiv:2401.02038v2)*A Comprehensive Overview from Training to Inference*
+* [Source:](https://arxiv.org/abs/2401.02038) *A Comprehensive Overview from Training to Inference*
 
 ## Introduction
 
