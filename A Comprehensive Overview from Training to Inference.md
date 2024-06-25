@@ -1,6 +1,6 @@
 # Understanding LLMs: A Comprehensive Overview from Training to Inference
 
-*arXiv:2401.02038v2 [cs.CL] 06 Jan 2024*
+* [Source:](arXiv:2401.02038v2)*A Comprehensive Overview from Training to Inference*
 
 ## Introduction
 
