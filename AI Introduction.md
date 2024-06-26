@@ -36,10 +36,10 @@
 
 |Learning Type|Description|Examples|
 |-|-|-|
-|**Supervised Learning**|Uses labeled data where each input is associated with a correct output>br>Predicts outcomes for new data based on training<br>Ideal for classification and regression tasks|Classification: Linear classifiers, decision trees<br>Regression: Linear regression, logistic regression|
+|**Supervised Learning**|Uses labeled data where each input is associated with a correct output<br>Predicts outcomes for new data based on training<br>Ideal for classification and regression tasks|Classification: Linear classifiers, decision trees<br>Regression: Linear regression, logistic regression|
 |**Unsupervised Learning**| Analyzes unlabeled data to find hidden patterns<br>No human intervention needed for labeling data|Clustering: K-means clustering, hierarchical clustering<br>Association: Apriori algorithm, market basket analysis|
 |**Semi-Supervised Learning**|Combines techniques from supervised and unsupervised learning for scenarios with limited labeled data and abundant unlabeled data|Generative Adversarial Network (GAN)|
-|**Reinforcement Learning**|Agent learns to interact with an environment through trial and error<br>>Receives rewards or penalties based on actions<br>Learns optimal actions to maximize cumulative rewards|AlphaGo: Learned to play Go at a world-champion level|
+|**Reinforcement Learning**|Agent learns to interact with an environment through trial and error<br>Receives rewards or penalties based on actions<br>Learns optimal actions to maximize cumulative rewards|AlphaGo: Learned to play Go at a world-champion level|
 
 ### Deep Learning
 
