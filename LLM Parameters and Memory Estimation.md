@@ -213,10 +213,13 @@
 
 * [Fully Sharded Data Parallel (FSDP)](https://engineering.fb.com/2021/07/15/open-source/fsdp/) is the newest tool we’re introducing. It shards an AI model’s parameters across data parallel workers and can optionally offload part of the training computation to the CPUs.
 
-### Tim Dettmers et al
+### [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
 
 * QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
-**Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
+
+* QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes.
+
+* **Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
 
 ### QLoRA and FSDP Explained with Chef and Cooking Examples
 
