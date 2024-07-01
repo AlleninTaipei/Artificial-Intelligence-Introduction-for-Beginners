@@ -375,10 +375,13 @@ That is to say: 1 < Batch Size < Dataset size
 
 ## How to Use AI Tools to Boost Your Productivity
 
-### Using AI for Day-to-Day Tasks
+### Promprt Engineering
 
-**Prompt, Refine, Repeat**
-If your initial prompt doesn’t return the result you were looking for, let the AI know, specifically, how it can improve.
+* **Prompt, Refine, Repeat**, if your initial prompt doesn’t return the result you were looking for, let the AI know, specifically, how it can improve.
+
+* [Promprt Engineering](https://github.com/AlleninTaipei/Summarizing-Articles-with-ChatGPT-3.5/blob/main/Prompt%20Engineering.md)
+
+### Using AI for Day-to-Day Tasks
 
 * Task Management
 * Brainstorming
@@ -421,19 +424,6 @@ If your initial prompt doesn’t return the result you were looking for, let the
 * Automation
 * Visualization
 * Excel Tips and Tricks
-
-### ChatGPT prompts examples
-
-|Prompt|Example|
-|-|-|
-|**The McKinsey 7S Framework**|Analyze [MY PRODUCT/BUSINESS] using the 7S framework. How aligned are our strategy, structure, systems, shared values, skills, style, and staff?|
-|**Learn Complicated Topics Faster**|Explain [COMPLEX TOPIC] like I’m a 5 year old|
-|**Business Analysis**|Analyze the current state of the [INDUSTRY] and describe its trends, challenges, and opportunities. Support your analysis with relevant data and statistics. Additionally, provide a comprehensive list of key players in the industry.|
-|**The Cynefin Framework**|Evaluate the problems [MY PRODUCT/BUSINESS] faced using the Cynefin Framework. Are they simple, complicated, complex, chaotic, or in disorder?|
-|**Write Copy for Your Business**|Write a 50-word copy for a product called [PRODUCT NAME] that helps struggling [TARGET AUDIENCE] get more followers and earn money in 30 days with a guarantee, then ask them to sign up at [COMPANY].|
-|**Strengthen your Personal Development Skills**|[ DESCRIBE YOUR PERSONAL DEVELOPMENT GOALS AND CHALLENGES]. Using the GROW(Goal, Reality, Options, Will) coaching model helped me create a personal development plan to achieve my goals.|
-|**Create a successful product launch strategy**|[INSERT A BRIEF DESCRIPTION OF YOUR PRODUCT AND TARGET AUDIENCE] Guide me through developing a product launch strategy using the Product Launch Formula to generate interest and sales.|
-|**Get Advice from your Business Idols**|Here is the situation I’m currently facing: [INSERT SITUATION] Based on these circumstances, what would [STEVE JOBS]? recommend me to do?|
 
 ### Use Keywords
 
