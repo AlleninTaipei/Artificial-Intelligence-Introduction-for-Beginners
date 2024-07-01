@@ -35,13 +35,13 @@
 |[MAINGEAR SHODAN 192](https://maingear.com/product/pro-ai-shodan-192-reservation/)|70B|192 GB|
 |[Answer.AI](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)|70B|24GB x 2|
 
-### Scaling Laws
+### [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
-* **Scaling laws in the context of LLMs highlight the relationship between the model size, data, and computational resources with the performance and capabilities of the models. While the number of parameters is a major factor, precision, data quality, model architecture, and training techniques also play vital roles. Balancing these elements against their respective challenges and trade-offs is essential for developing and deploying efficient and powerful LLMs.**
+* Scaling laws in the context of LLMs highlight the relationship between the model size, data, and computational resources with the performance and capabilities of the models. While the number of parameters is a major factor, precision, data quality, model architecture, and training techniques also play vital roles. Balancing these elements against their respective challenges and trade-offs is essential for developing and deploying efficient and powerful LLMs.
 
-* **As models get bigger (more parameters) or are trained on more data, they tend to get better at their tasks in a predictable way.**
+* As models get bigger (more parameters) or are trained on more data, they tend to get better at their tasks in a predictable way.
 
-* **By framing the information in terms of scaling laws, it becomes clear how each factor contributes to the overall performance and what trade-offs must be considered when <u>scaling up LLMs.</u>**
+* By framing the information in terms of scaling laws, it becomes clear how each factor contributes to the overall performance and what trade-offs must be considered when scaling up LLMs.
 
 |Key Factors|Importance|Challenges and Trade-offs|
 |-|-|-|
@@ -130,9 +130,9 @@
 
 ## Memory Optimization Techniques for Efficient Model Training
 
-* **By leveraging these techniques, you can achieve state-of-the-art model performance without the need for extremely high-end hardware, making advanced AI more accessible and practical.**
+* By leveraging these techniques, you can achieve state-of-the-art model performance without the need for extremely high-end hardware, making advanced AI more accessible and practical.
 
-* **This collective term and explanation provide a clear and concise way to communicate the benefits of these advanced techniques to buyers, emphasizing both their practical applications and their cost-saving advantages.**
+* This collective term and explanation provide a clear and concise way to communicate the benefits of these advanced techniques to buyers, emphasizing both their practical applications and their cost-saving advantages.
 
 |Technique|Primary Use Case|Key Benefit|Main Drawback|
 |-|-|-|-|
@@ -147,10 +147,11 @@
 |**Offloading**|Using CPU or NVMe for storage|Extends memory capacity beyond GPU VRAM|Latency due to data transfer|
 |**Activation Quantization**|Reducing memory usage|Lowers VRAM by reducing activation precision|Potential loss in model accuracy|
 |**ZeRO (Zero Redundancy Optimizer)**|Memory-efficient optimization|Drastically reduces memory footprint|Requires advanced implementation|
+|**FSDP (Fully Sharded Data Parallel)**|Efficient distributed training|Combines benefits of data and model parallelismImplementation complexity and potential communication overhead|
 
 ### [Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)
 
-* **It’s called “mixed-“ rather than “low-“precision training because we don’t transfer all parameters and operations to 16-bit floats. Instead, we switch between 32-bit and 16-bit operations during training, hence, the term “mixed” precision.**
+* It’s called “mixed-“ rather than “low-“precision training because we don’t transfer all parameters and operations to 16-bit floats. Instead, we switch between 32-bit and 16-bit operations during training, hence, the term “mixed” precision.
 
 |Step|Processed|
 |-|-|
@@ -162,9 +163,11 @@
 
 ### [Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
-* **Memory Usage in Backpropagation: Standard backpropagation stores all activations, leading to memory usage that scales linearly with the number of layers.**
-* **Only a subset of activations (checkpoints) are kept in memory. Nodes between checkpoints are recomputed during the backward pass, reducing memory usage. For example, if a neural network has 100 layers, checkpoints would be placed approximately every 10 layers.**
-* **Additional computation time is around 20%, allowing models more than 10x larger to fit onto a GPU.**
+* Memory Usage in Backpropagation: Standard backpropagation stores all activations, leading to memory usage that scales linearly with the number of layers.
+
+* Only a subset of activations (checkpoints) are kept in memory. Nodes between checkpoints are recomputed during the backward pass, reducing memory usage. For example, if a neural network has 100 layers, checkpoints would be placed approximately every 10 layers.
+
+* Additional computation time is around 20%, allowing models more than 10x larger to fit onto a GPU.
 
 ### [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 
@@ -252,7 +255,7 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 
 ### Building LLM Superstation on AMD Instinct GPUs
 
-* **Lamini makes AMD Instinct GPUs available through the LLM Superstation in both desktop and rack-mount server configurations.**
+* Lamini makes AMD Instinct GPUs available through the LLM Superstation in both desktop and rack-mount server configurations.
 
 [ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
 
