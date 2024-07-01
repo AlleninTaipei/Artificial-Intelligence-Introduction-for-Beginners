@@ -85,11 +85,12 @@ The daily work of a data scientist.
 
 ---
 
-## [Promprt Engineering](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Prompt%20Engineering.md)
+## [Promprt Engineering](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Prompt%20Engineering.md)
+
+The president of NVIDIA, Jensen Huang said during an interview with the UAE’s Minister of AI, Omar al-Olama at the World Government Summit in Dubai.
 
 *Everybody in the world is now a programmer. This is the miracle of AI. For the very first time, the technology divide has been completely closed. To engage with AI is a lot easier now than at any time in the history of computing.*
 
-The president of NVIDIA, Jensen Huang said during an interview with the UAE’s Minister of AI, Omar al-Olama at the World Government Summit in Dubai.
 ---
 
 ## License
