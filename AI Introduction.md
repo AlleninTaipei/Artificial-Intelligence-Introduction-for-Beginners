@@ -379,7 +379,7 @@ That is to say: 1 < Batch Size < Dataset size
 
 * **Prompt, Refine, Repeat**, if your initial prompt doesn’t return the result you were looking for, let the AI know, specifically, how it can improve.
 
-* [Promprt Engineering](https://github.com/AlleninTaipei/Summarizing-Articles-with-ChatGPT-3.5/blob/main/Prompt%20Engineering.md)
+* [Promprt Engineering](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Prompt%20Engineering.md)
 
 ### Using AI for Day-to-Day Tasks
 
