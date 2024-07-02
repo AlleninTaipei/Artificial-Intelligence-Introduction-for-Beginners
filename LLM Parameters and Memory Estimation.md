@@ -253,13 +253,15 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 |AMD|Radeon RX 7900 XT|**Radeon RX 7900 XTX**|Radeon Pro W7800|Radeon Pro W7900|MI300 (128GB or 192GB)|
 |Nvida|RTX A4500, RTX 4000 Ada|RTX 4090, RTX A5000, RTX A5500, RTX 4500 Ada|RTX 5000 Ada|RTX A6000, RTX 6000 Ada, RTX 5880 Ada|H100 (80GB)|
 
-### Building LLM Superstation on AMD Instinct GPUs
+### AMD GPUs
 
-* Lamini makes AMD Instinct GPUs available through the LLM Superstation in both desktop and rack-mount server configurations.
+* [AMD Radeon 7900 XT/XTX Inference Performance Comparisons](https://www.reddit.com/r/LocalLLaMA/comments/191srof/amd_radeon_7900_xtxtx_inference_performance/)
 
-[ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
+* [AMD GPU guide (now w/ ROCm info)](https://llm-tracker.info/howto/AMD-GPUs)
 
-[LLM Superstation](https://www.lamini.ai/blog/lamini-llm-finetuning-on-amd-rocm-a-technical-recipe)
+* Lamini makes AMD Instinct GPUs available through the [LLM Superstation](https://www.lamini.ai/blog/lamini-llm-finetuning-on-amd-rocm-a-technical-recipe) in both desktop and rack-mount server configurations.
+
+* [ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
 
 ### NVLink VRAM Pooling
 
