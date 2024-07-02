@@ -143,23 +143,21 @@ openai.api_key = 'your-api-key-here'
 
 # Define the function to send a request to the OpenAI API
 def get_response_from_llm(prompt, model="text-davinci-003", max_tokens=150, temperature=0.7):
-        
-response = openai.Completion.create(
-engine=model,
-prompt=prompt,
-max_tokens=max_tokens,
-n=1,
-stop=None,
-temperature=temperature
-)
-return response.choices[0].text.strip()
+    response = openai.Completion.create(
+        engine=model,
+        prompt=prompt,
+        max_tokens=max_tokens,
+        n=1,
+        stop=None,
+        temperature=temperature
+        )
+    return response.choices[0].text.strip()
 
 # Example prompt
 prompt = "Please provide 5 advices of activities for Valentine's Day"
 
 # Get the responses
 response_low_temp = get_response_from_llm(prompt, temperature=0.2)
-        
 response_high_temp = get_response_from_llm(prompt, temperature=2.0)
 
 # Print the responses
