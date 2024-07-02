@@ -135,37 +135,39 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 
 ### An example for temprature
 
-        import openai
+```python
+import openai
     
-        # Set your OpenAI API key
-        openai.api_key = 'your-api-key-here'
+# Set your OpenAI API key
+openai.api_key = 'your-api-key-here'
 
-        # Define the function to send a request to the OpenAI API
-        def get_response_from_llm(prompt, model="text-davinci-003", max_tokens=150, temperature=0.7):
+# Define the function to send a request to the OpenAI API
+def get_response_from_llm(prompt, model="text-davinci-003", max_tokens=150, temperature=0.7):
         
-        response = openai.Completion.create(
-        engine=model,
-        prompt=prompt,
-        max_tokens=max_tokens,
-        n=1,
-        stop=None,
-        temperature=temperature
-        )
-        return response.choices[0].text.strip()
+response = openai.Completion.create(
+engine=model,
+prompt=prompt,
+max_tokens=max_tokens,
+n=1,
+stop=None,
+temperature=temperature
+)
+return response.choices[0].text.strip()
 
-        # Example prompt
-        prompt = "Please provide 5 advices of activities for Valentine's Day"
+# Example prompt
+prompt = "Please provide 5 advices of activities for Valentine's Day"
 
-        # Get the responses
-        response_low_temp = get_response_from_llm(prompt, temperature=0.2)
+# Get the responses
+response_low_temp = get_response_from_llm(prompt, temperature=0.2)
         
-        response_high_temp = get_response_from_llm(prompt, temperature=2.0)
+response_high_temp = get_response_from_llm(prompt, temperature=2.0)
 
-        # Print the responses
-        print("Response with Low Temperature (0.2):")
-        print(response_low_temp)
-        print("\nResponse with High Temperature (2.0):")
-        print(response_high_temp)
+# Print the responses
+print("Response with Low Temperature (0.2):")
+print(response_low_temp)
+print("\nResponse with High Temperature (2.0):")
+print(response_high_temp)
+```
 
 |Advice Activity|Low Temperature (0.2)|High Temperature (2.0)|
 |-|-|-|
@@ -210,52 +212,54 @@ It is a technique used to train AI models, particularly in situations where the 
 
 Here's an example of how RLHF could be implemented using Python, TensorFlow (a popular machine learning framework), and a simple interactive user interface.
 
-    import tensorflow as tf
+```python
+import tensorflow as tf
 
-    # Define the text generation model (for demonstration purposes, a simple LSTM model)
-    class TextGenerationModel(tf.keras.Model):
-        def __init__(self):
-            super(TextGenerationModel, self).__init__()
-            self.embedding = tf.keras.layers.Embedding(vocab_size, embedding_dim)
-            self.lstm = tf.keras.layers.LSTM(units)
-            self.output_layer = tf.keras.layers.Dense(vocab_size, activation='softmax')
+# Define the text generation model (for demonstration purposes, a simple LSTM model)
+class TextGenerationModel(tf.keras.Model):
+    def __init__(self):
+        super(TextGenerationModel, self).__init__()
+        self.embedding = tf.keras.layers.Embedding(vocab_size, embedding_dim)
+        self.lstm = tf.keras.layers.LSTM(units)
+        self.output_layer = tf.keras.layers.Dense(vocab_size, activation='softmax')
 
-        def call(self, inputs):
-            x = self.embedding(inputs)
-            x = self.lstm(x)
-            return self.output_layer(x)
+    def call(self, inputs):
+        x = self.embedding(inputs)
+        x = self.lstm(x)
+        return self.output_layer(x)
 
-    # Initialize the text generation model
-    model = TextGenerationModel()
+# Initialize the text generation model
+model = TextGenerationModel()
 
-    # Define functions for collecting and processing user feedback
-    def collect_feedback(user_input, generated_output):
-        # Simulate collecting user feedback, for example, through a user interface
-        feedback = input("Was the generated response appropriate? (yes/no): ")
-        return feedback.lower() == "yes"
+# Define functions for collecting and processing user feedback
+def collect_feedback(user_input, generated_output):
+    # Simulate collecting user feedback, for example, through a user interface
+    feedback = input("Was the generated response appropriate? (yes/no): ")
+    return feedback.lower() == "yes"
 
-    # Update model parameters based on feedback (not implemented in this example)
-    # This could involve retraining the model with user-provided correct responses.
-    def process_feedback(feedback, user_input, generated_output):
-        if feedback:
-            print("Great! Model generated a correct response.")
-        else:
-            print("Oops! Model needs improvement.")
+# Update model parameters based on feedback (not implemented in this example)
+# This could involve retraining the model with user-provided correct responses.
+def process_feedback(feedback, user_input, generated_output):
+    if feedback:
+        print("Great! Model generated a correct response.")
+    else:
+        print("Oops! Model needs improvement.")
 
-    # Main loop for generating responses and collecting feedback
+# Main loop for generating responses and collecting feedback
     
-    while True:
-        user_input = input("Enter your query: ")
+while True:
+    user_input = input("Enter your query: ")
     
-        # Generate response using the model
-        generated_output = model.generate_response(user_input)
-        print("Generated response:", generated_output)
+    # Generate response using the model
+    generated_output = model.generate_response(user_input)
+    print("Generated response:", generated_output)
     
-        # Collect user feedback
-        feedback = collect_feedback(user_input, generated_output)
+    # Collect user feedback
+    feedback = collect_feedback(user_input, generated_output)
     
-        # Process feedback and update model
-        process_feedback(feedback, user_input, generated_output)
+    # Process feedback and update model
+    process_feedback(feedback, user_input, generated_output)
+```
 
 * We define a simple text generation model using TensorFlow.
 * We simulate collecting user feedback through a simple command-line interface where the user can provide feedback ("yes" or "no") on whether the generated response was appropriate.
