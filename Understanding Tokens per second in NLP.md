@@ -1,4 +1,4 @@
-# Understanding Token per second in NLP
+# Understanding Tokens per second in NLP
 
 * "Tokens per second" (often abbreviated as tok/s or tokens/s) is a metric used to measure the processing speed of language models, particularly in natural language processing (NLP) tasks. 
 

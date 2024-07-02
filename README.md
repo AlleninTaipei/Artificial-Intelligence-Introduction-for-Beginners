@@ -93,7 +93,7 @@ The president of NVIDIA, Jensen Huang said during an interview with the UAE’s 
 
 ---
 
-## [Understanding Token per second in NLP](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Understanding%20Tokens%20per%20second%20in%20NLP.md)
+## [Understanding Tokens per second in NLP](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Understanding%20Tokens%20per%20second%20in%20NLP.md)
 
 This comprehensive coverage provides a solid foundation for understanding, measuring, and optimizing tokens per second in machine learning models.
 
