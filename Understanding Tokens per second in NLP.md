@@ -35,12 +35,10 @@
 
 * The frameworks and libraries will log performance metrics, including tokens per second, during training or inference. Check the output logs or progress bars for this information.
 
-1. PyTorch:
+### PyTorch
 
 - `torch.cuda.Event()`: This can be used to measure GPU time precisely.
 - `torch.utils.benchmark`: A more comprehensive benchmarking tool.
-
-Example using `torch.cuda.Event()`:
 
 ```python
 import torch
@@ -59,12 +57,10 @@ tokens_processed = # number of tokens processed
 tokens_per_second = tokens_processed / time_elapsed
 ```
 
-2. TensorFlow:
+### TensorFlow
 
 - `tf.timestamp()`: For measuring time intervals.
 - TensorFlow Profiler: A more comprehensive tool for performance analysis.
-
-Example:
 
 ```python
 import tensorflow as tf
@@ -78,7 +74,7 @@ tokens_processed = # number of tokens processed
 tokens_per_second = tokens_processed / time_elapsed
 ```
 
-3. Hugging Face Transformers:
+### Hugging Face Transformers
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -93,7 +89,7 @@ inputs = tokenizer(input_text, return_tensors="pt")
 output = model.generate(**inputs, max_new_tokens=50)
 ```
 
-4. JAX/Flax:
+### JAX/Flax
 
 JAX provides `jax.profiler` for detailed performance analysis:
 
@@ -107,7 +103,7 @@ with profiler.trace("generate"):
 # View the trace in TensorBoard
 ```
 
-## Important concepts
+## The most important concepts
 
 * While a higher tokens per second rate is generally desirable for efficiency, it doesn't necessarily correlate with better model quality or accuracy. It's purely a measure of processing speed.
 
