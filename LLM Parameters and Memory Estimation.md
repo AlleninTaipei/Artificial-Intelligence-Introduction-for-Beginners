@@ -263,6 +263,8 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 
 * [ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
 
+* [LLM Worksheet](https://docs.google.com/spreadsheets/d/1kT4or6b0Fedd-W_jMwYpb63e1ZR3aePczz3zlbJW-Y4/edit?gid=752855929#gid=752855929)
+
 ### NVLink VRAM Pooling
 
 * It refers to the ability to combine the video memory (VRAM) of multiple GPUs into a single, large memory pool. This allows for more efficient use of VRAM, especially in workloads that require large amounts of memory, such as deep learning models or complex simulations.
