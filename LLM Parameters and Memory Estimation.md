@@ -206,11 +206,7 @@
 
 ---
 
-## Train a 70b model on two 24GB GPUs
-
-### [You can now train a 70b language model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)
-
-* *We’re releasing an open source system, based on FSDP and QLoRA, that can train a 70b model on two 24GB GPUs.* - Answer.AI, Tim Dettmers (U Washington), and Hugging Face’s Titus von Koeller and Sourab Mangrulkar.
+## [Train a 70b model on two 24GB GPUs](https://github.com/AnswerDotAI/fsdp_qlora/tree/main?trk=public_post_comment-text)
 
 ### Meta’s PyTorch team:  faster AI training with fewer GPUs
 
