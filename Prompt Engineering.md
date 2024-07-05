@@ -1,5 +1,9 @@
 # Promprt Engineering
 
+## OpenAI website
+
+* [Promprt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
+
 ## 10 Levels of ChatGPT Prompting: Beginner to Award Winning
 
 * [Source](https://www.youtube.com/watch?v=2djqKsRXt_Q&t=14s) *Patrick Storm*
