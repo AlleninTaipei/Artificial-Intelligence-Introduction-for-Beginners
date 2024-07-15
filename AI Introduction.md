@@ -369,7 +369,7 @@ That is to say: 1 < Batch Size < Dataset size
 * **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
 * **Comparative Measure:** It allows for the comparison of different models or different versions of the same model to determine which performs better on the task at hand.
 
-* [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
+* [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
 
 ---
 
