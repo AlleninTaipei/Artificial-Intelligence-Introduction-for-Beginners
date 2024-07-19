@@ -48,23 +48,23 @@ Americans report feeling more concerned than excited about AI, rising from 37% i
 
 ---
 
-* [Chapter 1: Research and Development](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-1-research-and-development)
+* [Chapter 1: Research and Development](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-1-research-and-development)
 
-* [Chapter 2: Technical Performance](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-2-technical-performance)
+* [Chapter 2: Technical Performance](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-2-technical-performance)
 
-* [Chapter 3: Responsible AI](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-3-responsible-ai)
+* [Chapter 3: Responsible AI](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-3-responsible-ai)
 
-* [Chapter 4: Economy](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-4-economy)
+* [Chapter 4: Economy](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-4-economy)
 
-* [Chapter 5: Science and Medicine](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-5-science-and-medicine)
+* [Chapter 5: Science and Medicine](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-5-science-and-medicine)
 
-* [Chapter 6: Education](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-6-education)
+* [Chapter 6: Education](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-6-education)
 
-* [Chapter 7: Policy and Governance](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-7-policy-and-governance)
+* [Chapter 7: Policy and Governance](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-7-policy-and-governance)
 
-* [Chapter 8: Diversity](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-8-diversity)
+* [Chapter 8: Diversity](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-8-diversity)
 
-* [Chapter 9: Public Opinion](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-9-public-opinion)
+* [Chapter 9: Public Opinion](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/Artificial%20Intelligence%20Index%20Report%202024.md#chapter-9-public-opinion)
 
 ---
 
