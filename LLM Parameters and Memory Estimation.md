@@ -169,6 +169,8 @@
 
 * Additional computation time is around 20%, allowing models more than 10x larger to fit onto a GPU.
 
+* Gradient-checkpointing is a technique used in training deep neural networks to save memory. It works by trading off computation for memory usage. Instead of storing the activations of all layers during the forward pass, it only stores the activations at certain "checkpoint" layers. During the backward pass, the intermediate activations that were not stored are recomputed as needed. This reduces the memory needed to store activations, allowing the training of larger models or using larger batch sizes without running out of memory.
+
 ### [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 
 * An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
