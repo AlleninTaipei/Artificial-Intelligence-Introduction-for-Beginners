@@ -1,8 +1,6 @@
 # Artificial Intelligence Introduction for Beginners
 
-Welcome to the "Artificial Intelligence Introduction for Beginners"!
-This comprehensive study note is designed to provide a solid foundation in artificial intelligence for newcomers.
-Whether you're a student, an aspiring data scientist, or simply curious about AI, this guide will help you understand the basics and build your knowledge step-by-step.
+Welcome to the "Artificial Intelligence Introduction for Beginners"! This comprehensive study note is designed to provide a solid foundation in artificial intelligence for newcomers. Whether you're a student, an aspiring data scientist, or simply curious about AI, this guide will help you understand the basics and build your knowledge step-by-step.
 
 |Topics|Description|
 |-|-|
