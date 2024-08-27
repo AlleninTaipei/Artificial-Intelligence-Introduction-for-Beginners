@@ -234,19 +234,19 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 
 * It refers to the ability to combine the video memory (VRAM) of multiple GPUs into a single, large memory pool. This allows for more efficient use of VRAM, especially in workloads that require large amounts of memory, such as deep learning models or complex simulations.
 
-|Key benefits||
-|-|-|
-|Increased Effective Memory Capacity|By pooling the VRAM of multiple GPUs, applications can access a larger memory space than what is available on a single GPU. This is particularly beneficial for training large AI models or running large-scale simulations that exceed the VRAM capacity of individual GPUs.|
-|Faster Data Transfer|NVLink provides significantly higher bandwidth compared to PCIe, enabling faster data transfer between GPUs. This reduces the latency and improves the performance of applications that require frequent communication between GPUs.|
-|Unified Memory Access|With VRAM pooling, memory management becomes more straightforward as the system can treat the pooled VRAM as a single, unified memory space. This can simplify programming and optimize resource utilization.|
-
-|Use Cases||
-|-|-|
-|AI and Deep Learning|Training large neural networks often requires vast amounts of memory. NVLink VRAM pooling allows researchers to train models that wouldn't fit into the memory of a single GPU.|
-|Scientific Simulations|Complex simulations, such as those used in physics, climate modeling, and bioinformatics, can benefit from the increased memory capacity and faster data transfer provided by NVLink VRAM pooling.|
-|High-Performance Computing (HPC)|HPC applications that require significant computational power and memory can leverage NVLink VRAM pooling to improve performance and efficiency.|
-
 *  **Consumer graphics cards like the RTX 4080 and RTX 4090 do not support NVLink. The RTX 3090 is the last in the consumer lineup to support NVLink.** This means you cannot utilize NVLink for VRAM pooling with the newer RTX 40 series consumer cards.
+
+|Key benefits|Notes|
+|-|-|
+|**Increased Effective Memory Capacity**|By pooling the VRAM of multiple GPUs, applications can access a larger memory space than what is available on a single GPU. This is particularly beneficial for training large AI models or running large-scale simulations that exceed the VRAM capacity of individual GPUs.|
+|**Faster Data Transfer**|NVLink provides significantly higher bandwidth compared to PCIe, enabling faster data transfer between GPUs. This reduces the latency and improves the performance of applications that require frequent communication between GPUs.|
+|**Unified Memory Access**|With VRAM pooling, memory management becomes more straightforward as the system can treat the pooled VRAM as a single, unified memory space. This can simplify programming and optimize resource utilization.|
+
+|Use Cases|Notes|
+|-|-|
+|**AI and Deep Learning**|Training large neural networks often requires vast amounts of memory. NVLink VRAM pooling allows researchers to train models that wouldn't fit into the memory of a single GPU.|
+|**Scientific Simulations**|Complex simulations, such as those used in physics, climate modeling, and bioinformatics, can benefit from the increased memory capacity and faster data transfer provided by NVLink VRAM pooling.|
+|**High-Performance Computing (HPC)**|HPC applications that require significant computational power and memory can leverage NVLink VRAM pooling to improve performance and efficiency.|
 
 ### Multiple gpus work together in a system to train the model (Two RTX 4090 GPUs = 24GB x 2 = 48GB ?)
 
@@ -275,9 +275,9 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 
 |Performance Implications|RTX 3090|RTX 4090|
 |-|-|-|
-|Inter-GPU Communication|The high bandwidth provided by NVLink allows for efficient inter-GPU communication, which is crucial for workloads that involve frequent data exchange between GPUs.|The reliance on PCIe for inter-GPU communication results in lower bandwidth and potentially higher latency, which can affect performance in workloads that require intensive GPU-to-GPU communication.|
-|Workload Efficiency|Ideal for tasks that benefit from high-speed data transfer between GPUs, such as distributed training of large neural networks, where data needs to be synchronized across GPUs.| While it has higher raw computational power and improved efficiency, the lack of NVLink means that it may not perform as well in scenarios where fast inter-GPU communication is critical.|
-|Practical Considerations|Deep Learning: In deep learning, especially with large models, the ability to quickly share data between GPUs can significantly impact training times. The RTX 3090's NVLink can provide an advantage in such cases.|Gaming and General Use: For gaming and general consumer applications, the difference in inter-GPU communication speed may be less noticeable, and the overall performance improvement of the RTX 4090 in terms of raw power and efficiency might be more beneficial.|
+|**Inter-GPU Communication**|The high bandwidth provided by NVLink allows for efficient inter-GPU communication, which is crucial for workloads that involve frequent data exchange between GPUs.|The reliance on PCIe for inter-GPU communication results in lower bandwidth and potentially higher latency, which can affect performance in workloads that require intensive GPU-to-GPU communication.|
+|**Workload Efficiency**|Ideal for tasks that benefit from high-speed data transfer between GPUs, such as distributed training of large neural networks, where data needs to be synchronized across GPUs.| While it has higher raw computational power and improved efficiency, the lack of NVLink means that it may not perform as well in scenarios where fast inter-GPU communication is critical.|
+|**Practical Considerations**|Deep Learning: In deep learning, especially with large models, the ability to quickly share data between GPUs can significantly impact training times. The RTX 3090's NVLink can provide an advantage in such cases.|Gaming and General Use: For gaming and general consumer applications, the difference in inter-GPU communication speed may be less noticeable, and the overall performance improvement of the RTX 4090 in terms of raw power and efficiency might be more beneficial.|
 
 ### Multiple computers (nodes) work together in a network to train the model
 
