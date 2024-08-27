@@ -2,29 +2,21 @@
 
 ## General understanding of VRAM requirements
 
-### Estimate Memory Usage for Inference
-
-|Model Size|float precision|BF16 precision|int8 precision|int4 precision|
+|Estimate Memory Usage for Inference|float precision|BF16 precision|int8 precision|int4 precision|
 |-|-|-|-|-|
 |7B|28 GB|14 GB|7 GB|3.5 GB|
 |13B|52 GB|26 GB|13 GB|6.5 GB|
 |34B|136 GB|68 GB|34 GB|17 GB|
 |70B|280 GB|150 GB|70 GB|35 GB|
 
-### Estimate Memory Usage for Training and Fine-Tuning
-
-* **General understanding of VRAM requirements**
-
-|Model Size|VRAM for Model Parameters|VRAM for Gradients and Optimizer States|Total VRAM Requirement|
+|Estimate Memory Usage for Training and Fine-Tuning|VRAM for Model Parameters|VRAM for Gradients and Optimizer States|Total VRAM Requirement|
 |-|-|-|-|
 |7B|28 GB|84 GB|112 GB|
 |13B|52 GB|156 GB|208 GB|
 |34B|136 GB|408 GB|544 GB|
 |70B|280 GB|840 GB|1120 GB|
-
-* **With Memory Optimization**
-
-|Find practical solutions on the Internet|Model Size|Total VRAM Size|
+  
+|Find practical memory pptimizatio solutions on the Internet|Model Size|Total VRAM Size|
 |-|-|-|
 |[Mentor-100](https://drive.google.com/file/d/1-umJYfhbdZ3Iaka3V4bP_MFiyLEvXuG3/view)|33B+|40 GB|
 |[Mentor-200](https://drive.google.com/file/d/1-umJYfhbdZ3Iaka3V4bP_MFiyLEvXuG3/view)|70B+|80 GB|
@@ -35,13 +27,13 @@
 |[MAINGEAR SHODAN 192](https://maingear.com/product/pro-ai-shodan-192-reservation/)|70B|192 GB|
 |[Answer.AI](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html)|70B|24GB x 2|
 
-### [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+## [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
 * Scaling laws in the context of LLMs highlight the relationship between the model size, data, and computational resources with the performance and capabilities of the models. While the number of parameters is a major factor, precision, data quality, model architecture, and training techniques also play vital roles. Balancing these elements against their respective challenges and trade-offs is essential for developing and deploying efficient and powerful LLMs.
-
 * As models get bigger (more parameters) or are trained on more data, they tend to get better at their tasks in a predictable way.
-
 * By framing the information in terms of scaling laws, it becomes clear how each factor contributes to the overall performance and what trade-offs must be considered when scaling up LLMs.
+* [Stanford cs224n](https://www.youtube.com/watch?v=UFem7xa3Q2Q)
+* [Stanford cs324](https://stanford-cs324.github.io/winter2022/assets/pdfs/Scaling%20laws%20pdf.pdf)
 
 |Key Factors|Importance|Challenges and Trade-offs|
 |-|-|-|
@@ -51,10 +43,7 @@
 |**Architecture and Optimization**|Advances in model architectures (such as Transformer-based models) and optimization techniques (like the Adam optimizer) have significantly enhanced the performance of LLMs.|Continuous innovation requires ongoing research and development. New architectures and optimizers may involve initial implementation challenges and computational costs.|
 |**Training Techniques**|Techniques like transfer learning, fine-tuning, and reinforcement learning from human feedback (RLHF) are crucial for improving model performance and adapting models to specific tasks.|These techniques require additional computational resources and time. Effective application demands expertise and careful management to avoid issues like overfitting.|
 
-* [Stanford cs224n](https://www.youtube.com/watch?v=UFem7xa3Q2Q)
-* [Stanford cs324](https://stanford-cs324.github.io/winter2022/assets/pdfs/Scaling%20laws%20pdf.pdf)
-
-### Model Size and Application
+## Model Size and Application
 
 |LLaMA 2|Large Language Model Meta AI|
 |-|-|
@@ -63,66 +52,42 @@
 |**Scalability**|Designed to handle large-scale datasets and complex language tasks, making it suitable for a wide range of applications.|
 |**Versatility**|Can be used for tasks such as text generation, language translation, summarization, question answering, and more.|
 
-#### LLaMA 2 - 7B
-
-* It is well-suited for applications that require fast response times and can operate on limited computational resources.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Customer Support Chatbots|Automating responses to common customer inquiries.|Reduces the need for human agents, providing instant support, improving customer satisfaction.|
-|Content Moderation|Filtering and moderating user-generated content on social media platforms.|Ensures community guidelines are followed, reduces manual moderation workload.|
-|Email Filtering and Categorization|Automatically categorizing and prioritizing emails.|Enhances productivity by helping users manage their inbox efficiently.|
-
-|LLaMA 2 - 7B|Description|
+|LLaMA 2 - 7B|It is well-suited for applications that require fast response times and can operate on limited computational resources.|
 |-|-|
+|**Customer Support Chatbots**|Automating responses to common customer inquiries.<br>Reduces the need for human agents, providing instant support, improving customer satisfaction.|
+|**Content Moderation**|Filtering and moderating user-generated content on social media platforms.<br>Ensures community guidelines are followed, reduces manual moderation workload.|
+|**Email Filtering and Categorization**|Automatically categorizing and prioritizing emails.<br>Enhances productivity by helping users manage their inbox efficiently.|
+|**Examples**|**Description**|
 |[Zendesk Answer Bot](https://www.chatbase.co/?gad_source=1&gclid=Cj0KCQjw9vqyBhCKARIsAIIcLMFMz2-AVPEfakCZOzhWIcRjR7mo1yNR9wRLUFLb2OzCDHyyr2ulzjsaAoWaEALw_wcB)|Automates customer support by providing instant responses to common questions.|
 |[OpenAI Moderation API](https://platform.openai.com/docs/api-reference/moderations)|Helps platforms detect and filter inappropriate content in real-time.|
 |[Google's Gmail Smart Compose](https://support.google.com/mail/answer/9116836?hl=en&co=GENIE.Platform%3DDesktop)|Suggests responses and helps categorize emails, making email management more efficient.|
 
-#### LLaMA 2 - 13B. 
-
-* It offers a balance between performance and resource requirements, suitable for moderately complex tasks.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Personalized Marketing|Generating personalized marketing content and product recommendations.|Increases engagement and conversion rates by targeting customers with relevant content.|
-|Virtual Personal Assistants|Assisting with scheduling, reminders, and routine tasks.|Improves efficiency and productivity for individuals and professionals.|
-|Sentiment Analysis|Analyzing customer feedback and social media sentiment.|Provides insights into customer opinions, aiding in strategic decision-making.|
-
-|LLaMA 2 - 13B|Description|
+|LLaMA 2 - 13B|It offers a balance between performance and resource requirements, suitable for moderately complex tasks.|
 |-|-|
+|**Personalized Marketing**|Generating personalized marketing content and product recommendations.<br>Increases engagement and conversion rates by targeting customers with relevant content.|
+|**Virtual Personal Assistants**|Assisting with scheduling, reminders, and routine tasks.<br>Improves efficiency and productivity for individuals and professionals.|
+|**Sentiment Analysis**|Analyzing customer feedback and social media sentiment.<br>Provides insights into customer opinions, aiding in strategic decision-making.|
+|**Examples**|**Description**|
 |[Adobe Experience Cloud](https://business.adobe.com/)|Uses AI to deliver personalized marketing experiences and product recommendations.|
 |[Google Assistant](https://assistant.google.com/)|Assists users with tasks like scheduling, reminders, and information retrieval.|
 |[Brandwatch](https://www.brandwatch.com/)|Analyzes social media and customer feedback to gauge public sentiment and opinions.|
 
-#### LLaMA 2 - 33B.
-
-* It is designed for more complex tasks requiring deeper language understanding and generation capabilities.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Advanced Document Understanding|Extracting insights and summarizing long documents, legal contracts, and research papers.|Saves time and resources in analyzing detailed and extensive texts.|
-|Automated Content Creation|Generating high-quality articles, reports, and creative writing.|Assists in content marketing and publishing by producing drafts that require minimal editing.|
-|Fraud Detection|Analyzing transactional data and identifying potentially fraudulent activities.|Enhances security and reduces financial losses due to fraud.|
-
-|LLaMA 2 - 33B|Description|
+|LLaMA 2 - 33B|It is designed for more complex tasks requiring deeper language understanding and generation capabilities.|
 |-|-|
+|**Advanced Document Understanding**|Extracting insights and summarizing long documents, legal contracts, and research papers.<br>Saves time and resources in analyzing detailed and extensive texts.|
+|**Automated Content Creation**|Generating high-quality articles, reports, and creative writing.<br>Assists in content marketing and publishing by producing drafts that require minimal editing.|
+|**Fraud Detection**|Analyzing transactional data and identifying potentially fraudulent activities.<br>Enhances security and reduces financial losses due to fraud.|
+|**Examples**|**Description**|
 |[Kira Systems](https://kirasystems.com/)|Uses AI to extract information from legal documents and contracts, aiding legal professionals.|
 |[Copy.ai](https://www.copy.ai/)|Description: Generates marketing copy, blog posts, and other content, reducing the workload for content creators.|
 |[Darktrace](https://darktrace.com/)|Utilizes AI to detect and respond to cyber threats and potential fraud in real-time.|
 
-#### LLaMA 2 - 70B. 
-
-* The 70B model, being the most powerful, is ideal for highly complex and resource-intensive tasks.
-
-|Application|Usage|Benefits|
-|-|-|-|
-|Comprehensive AI Research and Development|Building and testing sophisticated AI models and simulations.|Advances innovation in AI technology, pushing the boundaries of what's possible.|
-|Language Translation and Localization|Providing high-accuracy translations for multiple languages, including context-specific nuances.|Enables global businesses to communicate effectively across different regions and cultures.|
-|In-Depth Predictive Analytics|Analyzing large datasets to forecast trends and behaviors.|Assists in strategic planning and decision-making with high accuracy.|
-
-|LLaMA 2 - 70B|Description|
+|LLaMA 2 - 70B|The 70B model, being the most powerful, is ideal for highly complex and resource-intensive tasks.|
 |-|-|
+|**Comprehensive AI Research and Development**|Building and testing sophisticated AI models and simulations.<br>Advances innovation in AI technology, pushing the boundaries of what's possible.|
+|**Language Translation and Localization**|Providing high-accuracy translations for multiple languages, including context-specific nuances.<br>Enables global businesses to communicate effectively across different regions and cultures.|
+|**In-Depth Predictive Analytics**|Analyzing large datasets to forecast trends and behaviors.<br>Assists in strategic planning and decision-making with high accuracy.|
+|**Examples**|**Description**|
 |[DeepL Translator](https://www.deepl.com/translator)|Provides highly accurate translations, taking into account context and nuances in multiple languages.|
 |[IBM Watson](https://www.ibm.com/watson)|Offers predictive analytics solutions across various industries, including healthcare and finance, to forecast trends and behaviors.|
 
@@ -134,20 +99,20 @@
 
 * This collective term and explanation provide a clear and concise way to communicate the benefits of these advanced techniques to buyers, emphasizing both their practical applications and their cost-saving advantages.
 
-|Technique|Primary Use Case|Key Benefit|Main Drawback|
+|Strategies|Primary Use Case|Key Benefit|Main Drawback|
 |-|-|-|-|
-|**Mixed-Precision Training Mechanics**|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
-|**Gradient Checkpointing**|Reducing memory during backpropagation|Decreases VRAM usage|Increases computational overhead|
-|**Sharded Optimizers**|Reducing per-GPU memory usage|Distributes memory load|Complexity in implementation|
-|**LoRA**|Efficient fine-tuning|Lowers VRAM for fine-tuning|May not be applicable for pre-training|
-|**QLoRA**|Efficient fine-tuning with quantization|Further reduces VRAM for fine-tuning|Complexity in implementation|
-|**Model Parallelism**|Handling large models|Enables training of very large models|Increases inter-GPU communication overhead|
 |**Data Parallelism**|Distributing data across GPUs|Simple and scalable approach|Synchronization overhead|
 |**Tensor Parallelism**|Splitting tensors across GPUs|Efficient use of GPU resources|Complexity in implementation|
-|**Offloading**|Using CPU or NVMe for storage|Extends memory capacity beyond GPU VRAM|Latency due to data transfer|
-|**Activation Quantization**|Reducing memory usage|Lowers VRAM by reducing activation precision|Potential loss in model accuracy|
+|**Model Parallelism**|Handling large models|Enables training of very large models|Increases inter-GPU communication overhead|
 |**ZeRO (Zero Redundancy Optimizer)**|Memory-efficient optimization|Drastically reduces memory footprint|Requires advanced implementation|
 |**FSDP (Fully Sharded Data Parallel)**|Efficient distributed training|Combines benefits of data and model parallelismImplementation complexity and potential communication overhead|
+|**Sharded Optimizers**|Reducing per-GPU memory usage|Distributes memory load|Complexity in implementation|
+|**Mixed-Precision Training Mechanics**|Reducing memory and speeding up training|Halves memory usage, faster computation|Potential numerical instability|
+|**LoRA**|Efficient fine-tuning|Lowers VRAM for fine-tuning|May not be applicable for pre-training|
+|**QLoRA**|Efficient fine-tuning with quantization|Further reduces VRAM for fine-tuning|Complexity in implementation|
+|**Activation Quantization**|Reducing memory usage|Lowers VRAM by reducing activation precision|Potential loss in model accuracy|
+|**Offloading**|Using CPU or NVMe for storage|Extends memory capacity beyond GPU VRAM|Latency due to data transfer|
+|**Gradient Checkpointing**|Reducing memory during backpropagation|Decreases VRAM usage|Increases computational overhead|
 
 ### [Mixed-Precision Training Mechanics](https://lightning.ai/pages/community/tutorial/accelerating-large-language-models-with-mixed-precision-techniques/)
 
@@ -161,6 +126,10 @@
 |4. Multiply by learning rate and update weights|Now in FP32 format, the gradients are multiplied by a learning rate (a scalar value that determines the step size during optimization).|
 |Final. FP32 Weights|The product from step 4 is then used to update the original FP32 neural network weights. The learning rate helps control the convergence of the optimization process and is crucial for achieving good performance.|
 
+### [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+
+* An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
+
 ### [Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
 * Memory Usage in Backpropagation: Standard backpropagation stores all activations, leading to memory usage that scales linearly with the number of layers.
@@ -171,11 +140,9 @@
 
 * Gradient-checkpointing is a technique used in training deep neural networks to save memory. It works by trading off computation for memory usage. Instead of storing the activations of all layers during the forward pass, it only stores the activations at certain "checkpoint" layers. During the backward pass, the intermediate activations that were not stored are recomputed as needed. This reduces the memory needed to store activations, allowing the training of larger models or using larger batch sizes without running out of memory.
 
-### [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+---
 
-* An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times.
-
-### Practical understanding of the ideal and maximum size of Large Language Models
+## Practical understanding of the ideal and maximum size of Large Language Models
 
 |Memory Optimization Techniques Applied|Principle|
 |-|-|
@@ -281,22 +248,22 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 
 *  **Consumer graphics cards like the RTX 4080 and RTX 4090 do not support NVLink. The RTX 3090 is the last in the consumer lineup to support NVLink.** This means you cannot utilize NVLink for VRAM pooling with the newer RTX 40 series consumer cards.
 
-### Two RTX 4090 GPUs = 24GB x 2 = 48GB ?
+### Multiple gpus work together in a system to train the model (Two RTX 4090 GPUs = 24GB x 2 = 48GB ?)
 
 |Data Distribution|It doesn't increase the VRAM available for a single model instance. Instead, it allows you to distribute the workload, making better use of the combined memory resources.|
 |-|-|
-|Model Parallelism|The model is split across multiple GPUs. Each GPU processes different parts of the model, which allows the workload to use the combined memory of both GPUs.|
+|**Model Parallelism**|The model is split across multiple GPUs. Each GPU processes different parts of the model, which allows the workload to use the combined memory of both GPUs.|
 ||Usage: Suitable for large models that do not fit into the memory of a single GPU.|
 ||Limitation: Requires efficient communication between GPUs, which might not be optimal without NVLink. Data transfer between GPUs over PCIe is slower than NVLink|
-|Data Parallelism|Each GPU holds a copy of the entire model but processes different batches of data. This approach scales well across multiple GPUs but does not increase the available memory for a single model instance.|
+|**Data Parallelism**|Each GPU holds a copy of the entire model but processes different batches of data. This approach scales well across multiple GPUs but does not increase the available memory for a single model instance.|
 ||Usage: Effective for training on large datasets where each batch is processed independently.|
 ||Limitation: The memory limit for a single model instance remains the same as the VRAM of a single GPU (24 GB in the case of RTX 4090).|
 
 |Practical Example for Large Language Models (LLMs)|The actual VRAM available to a single process or model instance does not simply add up to 48 GB. Instead, you need to architect your workload to leverage the independent 24 GB VRAM of each GPU.|
 |-|-|
-|Data Parallelism|When training an LLM with two RTX 4090 GPUs, you can distribute different batches of data to each GPU. However, each GPU will still process its own 24 GB VRAM independently.|
-|Model Parallelism|If the model architecture supports it, you can split the model across two GPUs to use a combined memory of 48 GB, but this requires careful architecture and efficient inter-GPU communication.|
-|Inference and Serving|For inference, where the model size might exceed 24 GB, you can use model parallelism to split the model across two GPUs, allowing each GPU to handle a portion of the model.|
+|**Data Parallelism**|When training an LLM with two RTX 4090 GPUs, you can distribute different batches of data to each GPU. However, each GPU will still process its own 24 GB VRAM independently.|
+|**Model Parallelism**|If the model architecture supports it, you can split the model across two GPUs to use a combined memory of 48 GB, but this requires careful architecture and efficient inter-GPU communication.|
+|**Inference and Serving**|For inference, where the model size might exceed 24 GB, you can use model parallelism to split the model across two GPUs, allowing each GPU to handle a portion of the model.|
 
 ### RTX 3090 VS RTX 4090
 
@@ -314,25 +281,18 @@ Using these culinary analogies helps in understanding how QLoRA and FSDP optimiz
 
 ### Multiple computers (nodes) work together in a network to train the model
 
-* **Google's BERT (Bidirectional Encoder Representations from Transformers)**
-Google trained BERT using a distributed setup across multiple TPUs (Tensor Processing Units). TPUs are specialized hardware accelerators for machine learning workloads, and they can be used in a multi-node configuration to accelerate training. Google's use of TPUs in a distributed manner significantly reduced the time required to train BERT on massive text corpora.
-
-* **OpenAI's GPT-3**
-GPT-3, one of the largest language models, was trained by OpenAI using a large cluster of GPUs across multiple nodes. OpenAI used NVIDIA V100 GPUs in a distributed setup to manage the immense computational load required to train a model with 175 billion parameters. The training process involved sophisticated data and model parallelism techniques to efficiently utilize the hardware resources.
-
-* **Microsoft's Turing-NLG (Natural Language Generation)**
-Microsoft's Turing-NLG, another large-scale language model, was trained on a distributed system of NVIDIA DGX-2 nodes. Each DGX-2 node contains 16 NVIDIA V100 GPUs, and the distributed setup allowed Microsoft to train the model on a vast amount of data, using techniques like data parallelism and model parallelism to scale the training across multiple nodes.
-
-* **DeepMind's AlphaStar**
-Although not a language model, DeepMind's AlphaStar is a notable example of distributed training in reinforcement learning. AlphaStar was trained using a multi-node setup with thousands of TPUs to play the game StarCraft II at a superhuman level. The training process involved complex distributed systems to handle the massive amount of data and computation required.
-
-* **Facebook AI's RoBERTa**
-RoBERTa, a robustly optimized BERT approach, was trained on a distributed setup using PyTorch and NVIDIA GPUs. Facebook AI Research (FAIR) used a large number of GPU nodes to train RoBERTa on diverse datasets, employing techniques like mixed precision training and gradient accumulation to optimize performance across the distributed system.
-
-|Key Techniques Used in Distributed Training||
+|Practical Examples|Notes|
 |-|-|
-|Data Parallelism|Splitting the training data across multiple GPUs/nodes so each processes a different subset of the data.|
-|Model Parallelism|Dividing the model itself across multiple GPUs/nodes so each processes a different part of the model.|
-|Pipeline Parallelism|Breaking the model into stages and passing data through these stages sequentially.|
-|Gradient Accumulation|Accumulating gradients over several batches to effectively increase the batch size without needing additional memory.|
-|Horovod|An open-source distributed training framework developed by Uber that simplifies the process of training large models across multiple GPUs and nodes.|
+|**Google's BERT (Bidirectional Encoder Representations from Transformers)**|Google trained BERT using a distributed setup across multiple TPUs (Tensor Processing Units). TPUs are specialized hardware accelerators for machine learning workloads, and they can be used in a multi-node configuration to accelerate training. Google's use of TPUs in a distributed manner significantly reduced the time required to train BERT on massive text corpora.|
+|**OpenAI's GPT-3**|GPT-3, one of the largest language models, was trained by OpenAI using a large cluster of GPUs across multiple nodes. OpenAI used NVIDIA V100 GPUs in a distributed setup to manage the immense computational load required to train a model with 175 billion parameters. The training process involved sophisticated data and model parallelism techniques to efficiently utilize the hardware resources.|
+|**Microsoft's Turing-NLG (Natural Language Generation)**|Microsoft's Turing-NLG, another large-scale language model, was trained on a distributed system of NVIDIA DGX-2 nodes. Each DGX-2 node contains 16 NVIDIA V100 GPUs, and the distributed setup allowed Microsoft to train the model on a vast amount of data, using techniques like data parallelism and model parallelism to scale the training across multiple nodes.
+|**DeepMind's AlphaStar**|Although not a language model, DeepMind's AlphaStar is a notable example of distributed training in reinforcement learning. AlphaStar was trained using a multi-node setup with thousands of TPUs to play the game StarCraft II at a superhuman level. The training process involved complex distributed systems to handle the massive amount of data and computation required.|
+|**Facebook AI's RoBERTa**|RoBERTa, a robustly optimized BERT approach, was trained on a distributed setup using PyTorch and NVIDIA GPUs. Facebook AI Research (FAIR) used a large number of GPU nodes to train RoBERTa on diverse datasets, employing techniques like mixed precision training and gradient accumulation to optimize performance across the distributed system.|
+
+|Key Techniques Used in Distributed Training|Notes|
+|-|-|
+|**Data Parallelism**|Splitting the training data across multiple GPUs/nodes so each processes a different subset of the data.|
+|**Model Parallelism**|Dividing the model itself across multiple GPUs/nodes so each processes a different part of the model.|
+|**Pipeline Parallelism**|Breaking the model into stages and passing data through these stages sequentially.|
+|**Gradient Accumulation**|Accumulating gradients over several batches to effectively increase the batch size without needing additional memory.|
+|**Horovod**|An open-source distributed training framework developed by Uber that simplifies the process of training large models across multiple GPUs and nodes.|
