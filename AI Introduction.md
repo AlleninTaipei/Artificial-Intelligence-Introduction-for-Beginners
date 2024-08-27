@@ -8,33 +8,27 @@
 |**Machine Learning (ML)**|A subfield of AI where models are trained using data and algorithms to make predictions or decisions without explicit programming for each specific task.|
 |**Deep Learning/Neural Nets**|A subfield of ML utilizing multi-layered neural networks to perform complex tasks such as image classification and speech recognition with high accuracy.|
 
-### Artificial Intelligence
-
-|AI|Generative AI|Artificial General Intelligence (AGI) or General AI|
+|Artificial Intelligence|Generative AI|Artificial General Intelligence (AGI) or General AI|
 |-|-|-|
-|Definition|Creates data resembling its training|Possesses human-like cognitive abilities|
-|Examples|Generative Adversarial Networks, Large Language Models (e.g., GPT models)|Theoretical, depicted in science fiction|
-|Capabilities|||
-|- Data Creation|Generates synthetic data|Broad understanding without specific training|
-|- Content|Produces art, music, writing|Adapts to new tasks easily|
-|- Language|Understands and generates human text|Learns autonomously|
-|- Simulations|Creates realistic digital environments||	
-|Challenges||
-|- Quality Control|Ensuring consistent, high-quality output|Building a comprehensive cognitive model|
-|- Bias|Mitigating biases from training data|Ensuring safe behavior|
-|- Resources|Requires significant computational power|Managing ethical and societal impacts|
-|Current State|Practical applications (ChatGPT, Bard)|Mostly theoretical, still a distant goal|
-|Impact|Advances in problem-solving and creativity|Aspirational vision of human-like intelligence|
+|**Definition**|Creates data resembling its training|Possesses human-like cognitive abilities|
+|**Examples**|Generative Adversarial Networks, Large Language Models (e.g., GPT models)|Theoretical, depicted in science fiction|
+|**Capabilities**|||
+|Data Creation|Generates synthetic data|Broad understanding without specific training|
+|Content|Produces art, music, writing|Adapts to new tasks easily|
+|Language|Understands and generates human text|Learns autonomously|
+|Simulations|Creates realistic digital environments||	
+|**Challenges**||
+|Quality Control|Ensuring consistent, high-quality output|Building a comprehensive cognitive model|
+|Bias|Mitigating biases from training data|Ensuring safe behavior|
+|Resources|Requires significant computational power|Managing ethical and societal impacts|
+|**Current State**|Practical applications (ChatGPT, Bard)|Mostly theoretical, still a distant goal|
+|**Impact**|Advances in problem-solving and creativity|Aspirational vision of human-like intelligence|
 
 ### Machine Learning
 
-#### Machine Learning Algorithms
+**Machine Learning Algorithms**: Programs that adjust their performance based on data exposure and feedback, improving their accuracy and efficiency in tasks like image recognition and natural language processing.
 
-* Programs that adjust their performance based on data exposure and feedback, improving their accuracy and efficiency in tasks like image recognition and natural language processing.
-
-#### Machine Learning Types
-
-|Learning Type|Description|Examples|
+|Machine Learning Type|Description|Examples|
 |-|-|-|
 |**Supervised Learning**|Uses labeled data where each input is associated with a correct output<br>Predicts outcomes for new data based on training<br>Ideal for classification and regression tasks|Classification: Linear classifiers, decision trees<br>Regression: Linear regression, logistic regression|
 |**Unsupervised Learning**| Analyzes unlabeled data to find hidden patterns<br>No human intervention needed for labeling data|Clustering: K-means clustering, hierarchical clustering<br>Association: Apriori algorithm, market basket analysis|
@@ -46,8 +40,6 @@
 * Deep Learning is an advanced subset of machine learning that relies on neural networks, which are computational models inspired by the human brain. Neural networks consist of layers of interconnected nodes (neurons) that process data. The "deep" in deep learning refers to the multiple layers within these networks. Deep learning is particularly effective for complex tasks such as image classification and speech recognition. In practice, deep learning models are trained on vast amounts of data to perform specific tasks, like recognizing objects in images or translating spoken language in real time. These neural networks are implemented on specialized hardware to handle the intensive computations required.
 
 * Being a subset of machine learning, deep learning holds certain similarities to the broader concept such as the need for datasets and algorithms. However, it goes one step further in its analytical abilities by utilising various layers of neural networks. Deep learning algorithms typically utilise 3 or more layers in an artificial neural network. **Example: The largest GPT-3 model (175B) uses 96 attention layers.**
-
-#### Neural Networks
 
 |Components of Neural Networks|How It Works|Industry Applications|Limitations|
 |-|-|-|-|
@@ -79,27 +71,25 @@
 
 |Component/Process|Description|
 |-|-|
-|Input Layer|The initial layer that receives input data, which could be features from a dataset. The input layer receives raw data or features from the input source.|
+|**Input Layer**|The initial layer that receives input data, which could be features from a dataset. The input layer receives raw data or features from the input source.|
 ||The input layer does not process data; it simply passes the data to the next layer. There are no weights associated with the input layer itself; weights are applied in the connections between the input layer and the hidden layers.|
-|Hidden Layers|These intermediate layers process data and learn intricate patterns. A neural network can consist of multiple hidden layers, making it “deep” (Deep Neural Network, or DNN).|
+|**Hidden Layers**|These intermediate layers process data and learn intricate patterns. A neural network can consist of multiple hidden layers, making it “deep” (Deep Neural Network, or DNN).|
 ||In the hidden layers, each neuron processes the weighted sum of inputs and biases using an activation function. The activation function introduces non-linearity, allowing the network to capture complex patterns. The hidden layers play a crucial role in feature extraction and transformation.|
-|Weights and Biases Adjustment|During the learning phase, the network adjusts weights and biases through a process called backpropagation. It compares the network’s output to the desired output, calculates the error, and adjusts weights to minimize this error.|
+|**Weights and Biases Adjustment**|During the learning phase, the network adjusts weights and biases through a process called backpropagation. It compares the network’s output to the desired output, calculates the error, and adjusts weights to minimize this error.|
 ||Backpropagation involves calculating the gradient of the error with respect to each weight by the chain rule, iteratively updating the weights to minimize the error using optimization techniques such as gradient descent.|
-|Output Layer|The final layer that produces the network’s prediction or output. The processed information propagates through the hidden layers to the output layer. The output layer provides the final prediction or classification result.|
+|**Output Layer**|The final layer that produces the network’s prediction or output. The processed information propagates through the hidden layers to the output layer. The output layer provides the final prediction or classification result.|
 ||The nature of the output layer depends on the task: for classification, it might use a softmax activation function to output probabilities, while for regression tasks, it might use a linear activation function.|
-|Training|The network iteratively updates weights and biases using training data to minimize the prediction error. This process fine-tunes the network’s ability to make accurate predictions.|
+|**Training**|The network iteratively updates weights and biases using training data to minimize the prediction error. This process fine-tunes the network’s ability to make accurate predictions.|
 ||Training involves feeding the network with a large amount of labeled data, calculating the error for each prediction, and updating the weights accordingly. This process is repeated over many epochs until the network performs satisfactorily on the training data.|
-|Prediction|Once trained, the network can process new, unseen data and generate predictions or classifications based on the patterns it has learned.|During the prediction phase, the trained network uses the learned weights and biases to process new inputs and produce outputs. The network's performance on unseen data is often evaluated using separate validation and test datasets.|
+|**Prediction**|Once trained, the network can process new, unseen data and generate predictions or classifications based on the patterns it has learned.|During the prediction phase, the trained network uses the learned weights and biases to process new inputs and produce outputs. The network's performance on unseen data is often evaluated using separate validation and test datasets.|
 
-### Types of Artificial Neural Network 
-
-|Types|Applications|
+|Types of Artificial Neural Network|Applications|
 |-|-|
-|Feedforward Neural Networks (FNN)|Information flows from the input to the output layer without cycles.Commonly used in tasks like image recognition, classification, and regression.|
-|Convolutional Neural Networks (CNN)|Primarily used for image analysis, CNNs use specialized layers such as convolutional and pooling layers to automatically detect and learn spatial hierarchies of features in images.|
-|Generative Adversarial Networks (GAN)|Consisting of a generator and a discriminator, GANs are used for tasks like image generation, style transfer, and data augmentation. The generator creates data, while the discriminator evaluates its authenticity.|
-|Recurrent Neural Networks (RNN)|Connections form cycles, allowing feedback loops. Suitable for tasks involving sequences, such as language processing, time series prediction, and speech recognition.|
-|Long Short-Term Memory Networks (LSTM)|A type of RNN, LSTMs are designed to handle long-term dependencies and sequence data, known for their ability to remember information for extended periods. Commonly used in tasks like language modeling and machine translation.|
+|**Feedforward Neural Networks (FNN)**|Information flows from the input to the output layer without cycles.Commonly used in tasks like image recognition, classification, and regression.|
+|**Convolutional Neural Networks (CNN)**|Primarily used for image analysis, CNNs use specialized layers such as convolutional and pooling layers to automatically detect and learn spatial hierarchies of features in images.|
+|**Generative Adversarial Networks (GAN)**|Consisting of a generator and a discriminator, GANs are used for tasks like image generation, style transfer, and data augmentation. The generator creates data, while the discriminator evaluates its authenticity.|
+|**Recurrent Neural Networks (RNN)**|Connections form cycles, allowing feedback loops. Suitable for tasks involving sequences, such as language processing, time series prediction, and speech recognition.|
+|**Long Short-Term Memory Networks (LSTM)**|A type of RNN, LSTMs are designed to handle long-term dependencies and sequence data, known for their ability to remember information for extended periods. Commonly used in tasks like language modeling and machine translation.|
 |**Transformer**|The Transformer model is a deep learning model that adopts a self-attention mechanism, primarily used in Natural Language Processing (NLP) and increasingly in Computer Vision (CV). It allows for the handling of long-range dependencies more effectively than RNNs. **Introduced in the paper "[Attention Is All You Need](https://arxiv.org/abs/1706.03762)" by Google in 2017.**|
 
 ### Generative Pre-trained Transformers (GPT)
@@ -121,7 +111,7 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 
 ### Understanding the concept of parameters in a Large Language Model
 
-* Simple metaphorical math formula to describe a model with 2 parameters Total Parameters = (Factor A + Factor B)
+Simple metaphorical math formula to describe a model with 2 parameters Total Parameters = (Factor A + Factor B)
 
 ### Mathematical formula metaphorically decribing parameters in a model
 
@@ -353,7 +343,7 @@ For a dataset with 1000 samples and a batch size of 32, there will be 32 iterati
 * **Training Speed:** Larger batches allow for more efficient computation, often leveraging optimized hardware like GPUs. Smaller batches might slow down training due to less efficient hardware utilization.
 * **Convergence and Stability:** Larger batches tend to provide more stable and smooth convergence. Smaller batches can introduce more noise into the gradient descent process, which might help the model escape local minima but can also lead to instability.
 
-#### Understanding Epoch
+### Understanding Epoch
 
 * **One complete pass through the entire training dataset.**
 * **During an epoch, every example in the training dataset is processed once. If the dataset has 1 million examples and the batch size is 1,000, then 1,000 iterations are required to complete one epoch (1 million examples / 1,000 examples per batch).**
@@ -363,7 +353,7 @@ For a dataset with 1000 samples and a batch size of 32, there will be 32 iterati
 * **Mini-Batch Gradient Descent:** Finally, mini-batch gradient descent is when the batch size is greater than 1 but strictly smaller than the dataset size.
 That is to say: 1 < Batch Size < Dataset size
 
-#### Predictive accuracy (often shortened to "predictive-acc.")
+### Predictive accuracy (often shortened to "predictive-acc.")
 
 * **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
 * **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
