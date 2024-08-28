@@ -144,25 +144,6 @@
 
 ## Practical understanding of the ideal and maximum size of Large Language Models
 
-|Memory Optimization Techniques Applied|Principle|
-|-|-|
-|Mixed-Precision Training (FP16)|Reduces VRAM requirements by half.|
-|Gradient Checkpointing|Reduces the VRAM needed for storing activations.|
-|LoRA (Low-Rank Adaptation)|Reduces the number of trainable parameters.|
-|Offloading|Utilizes system RAM or storage to handle larger models.|
-|Activation Quantization|Lowers VRAM usage by reducing the precision of activations.|
-
-|An example of 32GB VRAM + 128GB System RAM|Practical Implementation|
-|-|-|
-|Ideal Scenario (7B Model)|Mixed-Precision Training: Reduces parameter storage to 14GB.|
-||Gradient Checkpointing: Manages intermediate activations within VRAM limits.|
-||LoRA: Focuses on fine-tuning fewer parameters, reducing additional VRAM needs.|
-||Offloading: Uses system RAM to store non-essential parts of the computation.|
-|Maximum Scenario (13B Model)|Mixed-Precision Training: Reduces parameter storage to 26GB.|
-||Gradient Checkpointing: Crucial for managing memory within VRAM limits.|
-||LoRA: Essential for reducing fine-tuning parameter memory.|
-||Offloading: Extensively uses system RAM to handle the model.|
-
 |Model Size|Baseline VRAM Requirement|VRAM with Mixed-Precision|VRAM with Gradient Checkpointing|VRAM with LoRA/QLoRA|VRAM with Sharded Optimizers|Consumer GPU Solution (32GB Each)|
 |-|-|-|-|-|-|-|
 |7B|28GB|14GB|21GB|4-8GB|10-15GB|2 GPUs (64GB total)|
