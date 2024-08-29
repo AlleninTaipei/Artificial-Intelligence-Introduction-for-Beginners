@@ -305,23 +305,17 @@ With 1 pcs of RTX A6000 Ada, it inferences by loading Llama 2 70B in **4 bit** q
 
 #### Pre-Training and Fine-Tuning
 
-Hidden Size(H): 4096
-Number of Layers(L): 32
-Sequence Length(S): 1024
-Batch Size(B): 16
-Training Dataset Size: Assume 150GB (based on large-scale corpora)
-Each parameter typically requires 4 bytes (for a 32-bit float).
-Model Size in Memory = 7 × 4 = 28 GB
-Activation memory = B x S x H x L = 16 × 1024 × 4096 × 4 × 32 = 8.2 GB
-Gradient and Optimizer States: For optimizers like Adam(Adaptive Moment Estimation), you need to store additional states, which typically triples the parameter storage.
-Optimizer memory = 7 x 4 x 3 = 84 GB
-Data Loading and Preprocessing Buffers: Consider a buffer for efficient data loading.
-Data loading buffer = B x H x S x 4 = 16 × 1024 × 4096 × 4 = 0.25 GB
-
-Total VRAM Calculation (Including a safety margin for overheads.)
-= (Model Parameters size + Activation memory + Optimizer memory + Data loading buffer)**x 1.3**
-= (28 GB + 8.2 GB + 84 GB + 0.25 GB) **x 1.3**
-≈ 157 GB
+* Hidden Size(H): 4096
+* Number of Layers(L): 32
+* Sequence Length(S): 1024
+* Batch Size(B): 16
+* Training Dataset Size: Assume 150GB (based on large-scale corpora)
+* Each parameter typically requires 4 bytes (for a 32-bit float). Model Size in Memory = 7 × 4 = 28 GB
+* Activation memory = B x S x H x L = 16 × 1024 × 4096 × 4 × 32 = 8.2 GB
+* Gradient and Optimizer States: For optimizers like Adam(Adaptive Moment Estimation), you need to store additional states, which typically triples the parameter storage.
+* Optimizer memory = 7 x 4 x 3 = 84 GB
+* Data Loading and Preprocessing Buffers: Consider a buffer for efficient data loading. Data loading buffer = B x H x S x 4 = 16 × 1024 × 4096 × 4 = 0.25 GB
+* Total VRAM Calculation (Including a safety margin for overheads.) = (Model Parameters size + Activation memory + Optimizer memory + Data loading buffer)**x 1.3** = (28 GB + 8.2 GB + 84 GB + 0.25 GB) **x 1.3** ≈ 157 GB
 
 |Model Size (Billion Parameters)|Model Parameters Size (Inference)|VRAM Requirement (Pre-Training and Fine-Tuning)|
 |-|-|-|
