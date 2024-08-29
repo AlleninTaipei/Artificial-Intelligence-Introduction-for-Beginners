@@ -296,17 +296,15 @@ Quantization reduces the memory and computational requirements of AI models by r
 
 ### Calculating GPU memory for serving Large Language Model in general understanding
 
-* Inference:
-**Total VRAM Calculation**
-= (The amount of parameters in the model)
-x (4, bytes, expressing the bytes used for each parameter)
-x (1.2, represents a 20% overhead of loading additional things in GPU memory)
-x (The amount of bits that should be used for loading the model. E.g. 16 bits, 8 bits or 4 bits)**/(32, there are 32 bits in 4 bytes)**
+#### Inference:
+
+Total VRAM Calculation = (The amount of parameters in the model) x (4, bytes, expressing the bytes used for each parameter) x (1.2, represents a 20% overhead of loading additional things in GPU memory) x (The amount of bits that should be used for loading the model. E.g. 16 bits, 8 bits or 4 bits)/(32, there are 32 bits in 4 bytes)
 
 Example: 70b x 4 x 1.2 x **4** /32 = 42GB
 With 1 pcs of RTX A6000 Ada, it inferences by loading Llama 2 70B in **4 bit** quantization mode.
 
-* Pre-Training and Fine-Tuning
+#### Pre-Training and Fine-Tuning
+
 Hidden Size(H): 4096
 Number of Layers(L): 32
 Sequence Length(S): 1024
@@ -320,7 +318,7 @@ Optimizer memory = 7 x 4 x 3 = 84 GB
 Data Loading and Preprocessing Buffers: Consider a buffer for efficient data loading.
 Data loading buffer = B x H x S x 4 = 16 × 1024 × 4096 × 4 = 0.25 GB
 
-**Total VRAM Calculation (Including a safety margin for overheads.)**
+Total VRAM Calculation (Including a safety margin for overheads.)
 = (Model Parameters size + Activation memory + Optimizer memory + Data loading buffer)**x 1.3**
 = (28 GB + 8.2 GB + 84 GB + 0.25 GB) **x 1.3**
 ≈ 157 GB
