@@ -109,13 +109,9 @@ Large Language Models, focus on linguistic data and can be built upon architectu
 * **Parameters**: Think of parameters as the pieces of information the model learns during its training phase. They're like the building blocks that help the model understand language and generate responses. These parameters are adjusted and fine-tuned through a process called training, where the model learns from a large dataset of text.
 * **Tokens:** Tokens are the basic units of language that the model works with. In simple terms, you can think of them as words, punctuation marks, or even parts of words. For example, in the sentence "The cat is sleeping," each word ("The," "cat," "is," "sleeping") is a token. But tokens can also represent parts of words or special characters, like prefixes or suffixes.
 
-### Understanding the concept of parameters in a Large Language Model
-
-Simple metaphorical math formula to describe a model with 2 parameters Total Parameters = (Factor A + Factor B)
-
 ### Mathematical formula metaphorically decribing parameters in a model
 
-* **Total Parameters = (Ingredients + Cooking Techniques) × Complexity Level Ingredients:**
+* Total Parameters = (Ingredients + Cooking Techniques) × Complexity Level Ingredients
 * Just like in a recipe, different ingredients represent different aspects of language learning, such as vocabulary, grammar rules, context understanding, etc. Cooking Techniques: These represent the methods used to combine and process the ingredients, akin to the algorithms and training processes used in building the language model. Complexity Level: This factor represents how intricate and nuanced the final dish (or text generation) needs to be. More complex dishes require more ingredients and advanced cooking techniques. So, the total number of parameters in a language model can be seen as a result of combining various ingredients with specific cooking techniques, all tailored to achieve a certain level of linguistic complexity.
 
 ### Let's use a metaphorical math formula to describe the parameters in an investment expert model: 
@@ -283,8 +279,8 @@ Here's an example of how RLHF could be implemented using Python, TensorFlow (a p
 
 ### Quantization
 
-* **Example: openbiollm-llama3-8b.Q8_0.gguf**
-* gguf = GPT-Generated Unified Format
+* Example: openbiollm-llama3-8b.Q8_0.gguf
+* [gguf](https://github.com/AlleninTaipei/Artificial-Intelligence-Study/blob/main/Get%20to%20know%20GGUF%20Files.md) = GPT-Generated Unified Format
 
 In computing, a single-precision floating-point number (FP32) occupies 4 bytes, whereas an 8-bit integer (INT-8) only occupies 1 byte. Storing 123.456789 requires a 4-byte FP32, while 123 only needs 1 byte, resulting in a fourfold difference. However, the discrepancy of 0.456789 may seem small, but in neural networks, these errors can be exponentially amplified with increasing layers. Hence, research in quantization focuses on minimizing errors after converting from floating-point to integer operations.
 
@@ -296,7 +292,9 @@ Quantization reduces the memory and computational requirements of AI models by r
 
 ### Calculating GPU memory for serving Large Language Model in general understanding
 
-#### Inference:
+* [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
+
+#### Inference
 
 Total VRAM Calculation = (The amount of parameters in the model) x (4, bytes, expressing the bytes used for each parameter) x (1.2, represents a 20% overhead of loading additional things in GPU memory) x (The amount of bits that should be used for loading the model. E.g. 16 bits, 8 bits or 4 bits)/(32, there are 32 bits in 4 bytes)
 
@@ -350,8 +348,6 @@ That is to say: 1 < Batch Size < Dataset size
 * **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
 * **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
 * **Comparative Measure:** It allows for the comparison of different models or different versions of the same model to determine which performs better on the task at hand.
-
-* [LLM: Parameters and Memory Estimation](https://github.com/AlleninTaipei/Artificial-Intelligence-Introduction-for-Beginners/blob/main/LLM%20Parameters%20and%20Memory%20Estimation.md)
 
 ---
 
