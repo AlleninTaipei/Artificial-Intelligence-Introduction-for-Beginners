@@ -140,6 +140,16 @@
 
 * Gradient-checkpointing is a technique used in training deep neural networks to save memory. It works by trading off computation for memory usage. Instead of storing the activations of all layers during the forward pass, it only stores the activations at certain "checkpoint" layers. During the backward pass, the intermediate activations that were not stored are recomputed as needed. This reduces the memory needed to store activations, allowing the training of larger models or using larger batch sizes without running out of memory.
 
+### Quantization
+
+In computing, a single-precision floating-point number (FP32) occupies 4 bytes, whereas an 8-bit integer (INT-8) only occupies 1 byte. Storing 123.456789 requires a 4-byte FP32, while 123 only needs 1 byte, resulting in a fourfold difference. However, the discrepancy of 0.456789 may seem small, but in neural networks, these errors can be exponentially amplified with increasing layers. Hence, research in quantization focuses on minimizing errors after converting from floating-point to integer operations.
+
+Quantization reduces the memory and computational requirements of AI models by representing numbers with fewer bits. This results in smaller model sizes, faster inference, lower power consumption, and improved compatibility with hardware accelerators. It also provides a regularization effect and cost savings. However, it may lead to some loss in accuracy and requires careful tuning for optimal performance. Overall, quantization offers significant benefits for deploying AI models efficiently in various applications.
+
+|Conversion|Quantization|
+|-|-|
+|The process of converting a trained machine learning model from one format to another. This conversion is often necessary to deploy the model on different platforms or runtime environments. For example, you might convert a model trained in TensorFlow to a format compatible with TensorFlow Lite for deployment on mobile devices, or to ONNX (Open Neural Network Exchange) format for deployment across various frameworks.|Reduce the computational and memory requirements of a model by reducing the precision of its weights and activations. In quantization, floating-point values are replaced with lower precision fixed-point or integer representations. This can significantly reduce the model size and make it more efficient for inference, especially on resource-constrained devices like mobile phones or IoT devices.|
+
 ---
 
 ## Practical understanding of the ideal and maximum size of Large Language Models
