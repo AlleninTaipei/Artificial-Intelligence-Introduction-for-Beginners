@@ -133,11 +133,8 @@
 ### [Gradient Checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
 * Memory Usage in Backpropagation: Standard backpropagation stores all activations, leading to memory usage that scales linearly with the number of layers.
-
 * Only a subset of activations (checkpoints) are kept in memory. Nodes between checkpoints are recomputed during the backward pass, reducing memory usage. For example, if a neural network has 100 layers, checkpoints would be placed approximately every 10 layers.
-
 * Additional computation time is around 20%, allowing models more than 10x larger to fit onto a GPU.
-
 * Gradient-checkpointing is a technique used in training deep neural networks to save memory. It works by trading off computation for memory usage. Instead of storing the activations of all layers during the forward pass, it only stores the activations at certain "checkpoint" layers. During the backward pass, the intermediate activations that were not stored are recomputed as needed. This reduces the memory needed to store activations, allowing the training of larger models or using larger batch sizes without running out of memory.
 
 ### Quantization
@@ -169,11 +166,8 @@ Quantization reduces the memory and computational requirements of AI models by r
 ## [Train a 70b model on two 24GB GPUs](https://github.com/AnswerDotAI/fsdp_qlora/tree/main?trk=public_post_comment-text)
 
 * [Fully Sharded Data Parallel (FSDP)](https://engineering.fb.com/2021/07/15/open-source/fsdp/) is the newest tool we’re introducing. It shards an AI model’s parameters across data parallel workers and can optionally offload part of the training computation to the CPUs.
-
 * [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
-  
 * QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
-
 * QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes.
 
 ### QLoRA and FSDP Explained with Chef and Cooking Examples
