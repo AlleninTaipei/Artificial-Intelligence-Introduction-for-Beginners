@@ -185,8 +185,7 @@ Quantization reduces the memory and computational requirements of AI models by r
 |**Low-Rank Adaptation**|You make minor adjustments to specific recipes based on customer demands, allowing you to quickly adapt without overhauling your entire skill set.|
 |**Summary**|QLoRA is like running an efficient kitchen where you save resources by optimizing storage and make quick, targeted adjustments to meet customer preferences, thus maintaining high performance and adaptability.|
 
-|FSDP|Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
-Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.|
+|FSDP|Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations. Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.|
 |:-|:-|
 |**Sharding**|You distribute the preparation tasks among your assistant chefs. Each chef is responsible for a specific portion of the work, such as chopping vegetables or marinating meat. Similarly, in FSDP, model parameters are divided into shards and distributed across multiple devices.|
 |**Parallel Processing**|All chefs work in parallel on their assigned tasks, communicating as necessary to ensure everything comes together seamlessly. In FSDP, each device processes its shard while synchronizing with others to ensure cohesive training of the model.|
