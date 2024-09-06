@@ -3,23 +3,21 @@
 ## What is a Data Engineer?
 
 * In recent years, the role of a data engineer has become extremely popular, particularly due to the rise of big data. Simply put, the primary job of a data engineer is to provide usable data to data users, which may include data analysts, data scientists, and various business units within the company such as the marketing department, HR department, etc.
-
 * Data engineers come from diverse backgrounds, including computer science, statistics, and even other industries. The key is their understanding of data and engineering.
-
 * Data engineers need to master various tools, including cloud services (GCP, AWS, Azure), distributed systems, container technology, scheduling tools, and streaming processing systems.
 
 ### The Role of Data Engineers in a Team
 
 * Data engineers are responsible for organizing and providing data to other roles within the data team, such as data analysts and data scientists. Data analysts explore surface information and trends from the data, while data scientists delve deeper to uncover hidden values and make predictions.
 
-|Scope of Work for Data Engineers|Description|
+|Scope of Work for Data Engineers|Notes|
 |-|-|
 |Data Collection|Writing web crawlers to collect data.|
 |Database Management|Ensuring data storage and management.|
 |Data Cleaning|Handling dirty data and converting it into an analyzable format.|
 |Model Deployment|Ensuring the operation and maintenance of models.|
 
-|Other Roles in the Team|Description|
+|Other Roles in the Team|Notes|
 |-|-|
 |Data Analyst|Explores information from data, conducts reports, and insights.|
 |Data Scientist|Digs deeper into data, builds predictive models.|
@@ -55,7 +53,7 @@
 | Typical Deliverables | Reports, dashboards, machine learning models | Data warehouses, ETL processes, data APIs |
 | Business Impact | Informs strategic decisions through data analysis | Enables data-driven operations through robust infrastructure|
 
-| Step | Description | Corresponding Tools |
+| Step | Notes | Corresponding Tools |
 |------|-------------|---------------------|
 | 1. Identify Data Sources | Determine where data is coming from (databases, APIs, files, etc.) | - Data catalogs (e.g., Alation, Collibra)<br>- Database management systems (e.g., MySQL, PostgreSQL)<br>- API management platforms (e.g., Apigee, MuleSoft) |
 | 2. Design Data Architecture | Plan how data will be stored, processed, and accessed | - Data modeling tools (e.g., erwin, ER/Studio)<br>- Cloud platforms (e.g., AWS, Azure, GCP)<br>- Data warehouse solutions (e.g., Snowflake, Redshift) |
