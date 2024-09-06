@@ -2,7 +2,7 @@
 
 ## Overview
 
-|Term|Description|
+|Term|Notes|
 |-|-|
 |**Artificial Intelligence (AI)**|A broad field aimed at creating machines that can perform tasks requiring human intelligence, including problem-solving, decision-making, and task execution.|
 |**Machine Learning (ML)**|A subfield of AI where models are trained using data and algorithms to make predictions or decisions without explicit programming for each specific task.|
@@ -28,7 +28,7 @@
 
 **Machine Learning Algorithms**: Programs that adjust their performance based on data exposure and feedback, improving their accuracy and efficiency in tasks like image recognition and natural language processing.
 
-|Machine Learning Type|Description|Examples|
+|Machine Learning Type|Notes|Examples|
 |-|-|-|
 |**Supervised Learning**|Uses labeled data where each input is associated with a correct output<br>Predicts outcomes for new data based on training<br>Ideal for classification and regression tasks|Classification: Linear classifiers, decision trees<br>Regression: Linear regression, logistic regression|
 |**Unsupervised Learning**| Analyzes unlabeled data to find hidden patterns<br>No human intervention needed for labeling data|Clustering: K-means clustering, hierarchical clustering<br>Association: Apriori algorithm, market basket analysis|
@@ -38,7 +38,6 @@
 ### Deep Learning
 
 * Deep Learning is an advanced subset of machine learning that relies on neural networks, which are computational models inspired by the human brain. Neural networks consist of layers of interconnected nodes (neurons) that process data. The "deep" in deep learning refers to the multiple layers within these networks. Deep learning is particularly effective for complex tasks such as image classification and speech recognition. In practice, deep learning models are trained on vast amounts of data to perform specific tasks, like recognizing objects in images or translating spoken language in real time. These neural networks are implemented on specialized hardware to handle the intensive computations required.
-
 * Being a subset of machine learning, deep learning holds certain similarities to the broader concept such as the need for datasets and algorithms. However, it goes one step further in its analytical abilities by utilising various layers of neural networks. Deep learning algorithms typically utilise 3 or more layers in an artificial neural network. **Example: The largest GPT-3 model (175B) uses 96 attention layers.**
 
 |Components of Neural Networks|How It Works|Industry Applications|Limitations|
@@ -69,7 +68,7 @@
 
 ## Artificial Neural Network (ANN)
 
-|Component/Process|Description|
+|Component/Process|Notes|
 |-|-|
 |**Input Layer**|The initial layer that receives input data, which could be features from a dataset. The input layer receives raw data or features from the input source.|
 ||The input layer does not process data; it simply passes the data to the next layer. There are no weights associated with the input layer itself; weights are applied in the connections between the input layer and the hidden layers.|
@@ -284,7 +283,6 @@ Here's an example of how RLHF could be implemented using Python, TensorFlow (a p
 ### Promprt Engineering
 
 * **Prompt, Refine, Repeat**, if your initial prompt doesn’t return the result you were looking for, let the AI know, specifically, how it can improve.
-
 * [Promprt Engineering](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Prompt%20Engineering.md)
 
 ### Using AI for Day-to-Day Tasks
