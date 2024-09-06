@@ -96,7 +96,6 @@
 ## Memory Optimization Techniques for Efficient Model Training
 
 * By leveraging these techniques, you can achieve state-of-the-art model performance without the need for extremely high-end hardware, making advanced AI more accessible and practical.
-
 * This collective term and explanation provide a clear and concise way to communicate the benefits of these advanced techniques to buyers, emphasizing both their practical applications and their cost-saving advantages.
 
 |Strategies|Primary Use Case|Key Benefit|Main Drawback|
@@ -139,9 +138,8 @@
 
 ### Quantization
 
-In computing, a single-precision floating-point number (FP32) occupies 4 bytes, whereas an 8-bit integer (INT-8) only occupies 1 byte. Storing 123.456789 requires a 4-byte FP32, while 123 only needs 1 byte, resulting in a fourfold difference. However, the discrepancy of 0.456789 may seem small, but in neural networks, these errors can be exponentially amplified with increasing layers. Hence, research in quantization focuses on minimizing errors after converting from floating-point to integer operations.
-
-Quantization reduces the memory and computational requirements of AI models by representing numbers with fewer bits. This results in smaller model sizes, faster inference, lower power consumption, and improved compatibility with hardware accelerators. It also provides a regularization effect and cost savings. However, it may lead to some loss in accuracy and requires careful tuning for optimal performance. Overall, quantization offers significant benefits for deploying AI models efficiently in various applications.
+* In computing, a single-precision floating-point number (FP32) occupies 4 bytes, whereas an 8-bit integer (INT-8) only occupies 1 byte. Storing 123.456789 requires a 4-byte FP32, while 123 only needs 1 byte, resulting in a fourfold difference. However, the discrepancy of 0.456789 may seem small, but in neural networks, these errors can be exponentially amplified with increasing layers. Hence, research in quantization focuses on minimizing errors after converting from floating-point to integer operations.
+* Quantization reduces the memory and computational requirements of AI models by representing numbers with fewer bits. This results in smaller model sizes, faster inference, lower power consumption, and improved compatibility with hardware accelerators. It also provides a regularization effect and cost savings. However, it may lead to some loss in accuracy and requires careful tuning for optimal performance. Overall, quantization offers significant benefits for deploying AI models efficiently in various applications.
 
 |Conversion|Quantization|
 |-|-|
@@ -198,19 +196,14 @@ Quantization reduces the memory and computational requirements of AI models by r
 ### AMD GPUs
 
 * [AMD Radeon 7900 XT/XTX Inference Performance Comparisons](https://www.reddit.com/r/LocalLLaMA/comments/191srof/amd_radeon_7900_xtxtx_inference_performance/)
-
 * [AMD GPU guide (now w/ ROCm info)](https://llm-tracker.info/howto/AMD-GPUs)
-
 * Lamini makes AMD Instinct GPUs available through the [LLM Superstation](https://www.lamini.ai/blog/lamini-llm-finetuning-on-amd-rocm-a-technical-recipe) in both desktop and rack-mount server configurations.
-
 * [ROCm on Radion](https://community.amd.com/t5/ai/amd-extends-support-for-pytorch-machine-learning-development-on/ba-p/637756)
-
 * [LLM Worksheet](https://docs.google.com/spreadsheets/d/1kT4or6b0Fedd-W_jMwYpb63e1ZR3aePczz3zlbJW-Y4/edit?gid=752855929#gid=752855929)
 
 ### NVLink VRAM Pooling
 
 * It refers to the ability to combine the video memory (VRAM) of multiple GPUs into a single, large memory pool. This allows for more efficient use of VRAM, especially in workloads that require large amounts of memory, such as deep learning models or complex simulations.
-
 *  **Consumer graphics cards like the RTX 4080 and RTX 4090 do not support NVLink. The RTX 3090 is the last in the consumer lineup to support NVLink.** This means you cannot utilize NVLink for VRAM pooling with the newer RTX 40 series consumer cards.
 
 |Key benefits|Notes|
