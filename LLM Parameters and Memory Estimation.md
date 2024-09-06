@@ -57,7 +57,7 @@
 |**Customer Support Chatbots**|Automating responses to common customer inquiries.<br>Reduces the need for human agents, providing instant support, improving customer satisfaction.|
 |**Content Moderation**|Filtering and moderating user-generated content on social media platforms.<br>Ensures community guidelines are followed, reduces manual moderation workload.|
 |**Email Filtering and Categorization**|Automatically categorizing and prioritizing emails.<br>Enhances productivity by helping users manage their inbox efficiently.|
-|**Examples**|**Description**|
+|**Examples**|**Notes**|
 |[Zendesk Answer Bot](https://www.chatbase.co/?gad_source=1&gclid=Cj0KCQjw9vqyBhCKARIsAIIcLMFMz2-AVPEfakCZOzhWIcRjR7mo1yNR9wRLUFLb2OzCDHyyr2ulzjsaAoWaEALw_wcB)|Automates customer support by providing instant responses to common questions.|
 |[OpenAI Moderation API](https://platform.openai.com/docs/api-reference/moderations)|Helps platforms detect and filter inappropriate content in real-time.|
 |[Google's Gmail Smart Compose](https://support.google.com/mail/answer/9116836?hl=en&co=GENIE.Platform%3DDesktop)|Suggests responses and helps categorize emails, making email management more efficient.|
@@ -67,7 +67,7 @@
 |**Personalized Marketing**|Generating personalized marketing content and product recommendations.<br>Increases engagement and conversion rates by targeting customers with relevant content.|
 |**Virtual Personal Assistants**|Assisting with scheduling, reminders, and routine tasks.<br>Improves efficiency and productivity for individuals and professionals.|
 |**Sentiment Analysis**|Analyzing customer feedback and social media sentiment.<br>Provides insights into customer opinions, aiding in strategic decision-making.|
-|**Examples**|**Description**|
+|**Examples**|**Notes**|
 |[Adobe Experience Cloud](https://business.adobe.com/)|Uses AI to deliver personalized marketing experiences and product recommendations.|
 |[Google Assistant](https://assistant.google.com/)|Assists users with tasks like scheduling, reminders, and information retrieval.|
 |[Brandwatch](https://www.brandwatch.com/)|Analyzes social media and customer feedback to gauge public sentiment and opinions.|
@@ -77,9 +77,9 @@
 |**Advanced Document Understanding**|Extracting insights and summarizing long documents, legal contracts, and research papers.<br>Saves time and resources in analyzing detailed and extensive texts.|
 |**Automated Content Creation**|Generating high-quality articles, reports, and creative writing.<br>Assists in content marketing and publishing by producing drafts that require minimal editing.|
 |**Fraud Detection**|Analyzing transactional data and identifying potentially fraudulent activities.<br>Enhances security and reduces financial losses due to fraud.|
-|**Examples**|**Description**|
+|**Examples**|**Notes**|
 |[Kira Systems](https://kirasystems.com/)|Uses AI to extract information from legal documents and contracts, aiding legal professionals.|
-|[Copy.ai](https://www.copy.ai/)|Description: Generates marketing copy, blog posts, and other content, reducing the workload for content creators.|
+|[Copy.ai](https://www.copy.ai/)|Generates marketing copy, blog posts, and other content, reducing the workload for content creators.|
 |[Darktrace](https://darktrace.com/)|Utilizes AI to detect and respond to cyber threats and potential fraud in real-time.|
 
 |LLaMA 2 - 70B|The 70B model, being the most powerful, is ideal for highly complex and resource-intensive tasks.|
@@ -87,7 +87,7 @@
 |**Comprehensive AI Research and Development**|Building and testing sophisticated AI models and simulations.<br>Advances innovation in AI technology, pushing the boundaries of what's possible.|
 |**Language Translation and Localization**|Providing high-accuracy translations for multiple languages, including context-specific nuances.<br>Enables global businesses to communicate effectively across different regions and cultures.|
 |**In-Depth Predictive Analytics**|Analyzing large datasets to forecast trends and behaviors.<br>Assists in strategic planning and decision-making with high accuracy.|
-|**Examples**|**Description**|
+|**Examples**|**Notes**|
 |[DeepL Translator](https://www.deepl.com/translator)|Provides highly accurate translations, taking into account context and nuances in multiple languages.|
 |[IBM Watson](https://www.ibm.com/watson)|Offers predictive analytics solutions across various industries, including healthcare and finance, to forecast trends and behaviors.|
 
@@ -168,37 +168,30 @@ Quantization reduces the memory and computational requirements of AI models by r
 
 ## [Train a 70b model on two 24GB GPUs](https://github.com/AnswerDotAI/fsdp_qlora/tree/main?trk=public_post_comment-text)
 
-### Meta’s PyTorch team:  faster AI training with fewer GPUs
-
 * [Fully Sharded Data Parallel (FSDP)](https://engineering.fb.com/2021/07/15/open-source/fsdp/) is the newest tool we’re introducing. It shards an AI model’s parameters across data parallel workers and can optionally offload part of the training computation to the CPUs.
 
-### [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
-
+* [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
+  
 * QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters.
 
 * QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes.
 
-* **Guanaco**, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU.
-
 ### QLoRA and FSDP Explained with Chef and Cooking Examples
 
-|QLoRA|Chef and Cooking|
-|-|-|
+|QLoRA|Represents efficient resource management and quick adaptation to specific needs in a kitchen, ensuring high performance and responsiveness.|
+|:-|:-|
 |**Pre-trained Model**|As a master chef, you possess extensive culinary knowledge, capable of preparing a diverse range of dishes.|
 |**Quantization**|To enhance efficiency, you store ingredients in smaller, more manageable containers, saving space and resources in your kitchen.|
 |**Low-Rank Adaptation**|You make minor adjustments to specific recipes based on customer demands, allowing you to quickly adapt without overhauling your entire skill set.|
 |**Summary**|QLoRA is like running an efficient kitchen where you save resources by optimizing storage and make quick, targeted adjustments to meet customer preferences, thus maintaining high performance and adaptability.|
 
-|FSDP|Chef and Cooking|
-|-|-|
+|FSDP|Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
+Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.|
+|:-|:-|
 |**Sharding**|You distribute the preparation tasks among your assistant chefs. Each chef is responsible for a specific portion of the work, such as chopping vegetables or marinating meat. Similarly, in FSDP, model parameters are divided into shards and distributed across multiple devices.|
 |**Parallel Processing**|All chefs work in parallel on their assigned tasks, communicating as necessary to ensure everything comes together seamlessly. In FSDP, each device processes its shard while synchronizing with others to ensure cohesive training of the model.|
 |**Coordination**|You ensure that the assistant chefs’ tasks integrate smoothly, resulting in a well-prepared banquet. In FSDP, devices coordinate to ensure the model training process is unified and complete.|
 |**Summary**|FSDP is like managing a large kitchen where tasks are distributed among multiple chefs, each focusing on their part while working in parallel and coordinating efforts to efficiently prepare a grand banquet.|
-
-* **QLoRA:** Represents efficient resource management and quick adaptation to specific needs in a kitchen, ensuring high performance and responsiveness.
-* **FSDP:** Represents collaborative, parallel efforts in a large kitchen, where tasks are distributed and synchronized to efficiently handle complex and large-scale preparations.
-Using these culinary analogies helps in understanding how QLoRA and FSDP optimize and manage large models in AI, akin to running an efficient and well-coordinated kitchen.
 
 ---
 
