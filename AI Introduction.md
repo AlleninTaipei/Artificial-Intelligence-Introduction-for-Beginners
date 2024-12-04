@@ -283,7 +283,7 @@ Here's an example of how RLHF could be implemented using Python, TensorFlow (a p
 ### Promprt Engineering
 
 * **Prompt, Refine, Repeat**, if your initial prompt doesn’t return the result you were looking for, let the AI know, specifically, how it can improve.
-* [Promprt Engineering](https://github.com/AlleninTaipei/Artificial-Intelligence-Tutorial-for-Beginners/blob/main/Prompt%20Engineering.md)
+* [Promprt Engineering](https://www.promptingguide.ai/)
 
 ### Using AI for Day-to-Day Tasks
 
